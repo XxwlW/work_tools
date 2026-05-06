@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://hq.sinajs.cn/list=hf_XAU\" -H \"Referer: https://finance.sina.com.cn/\")",
+      "Bash(curl -s \"https://hq.sinajs.cn/list=hf_AU99.95\" -H \"Referer: https://finance.sina.com.cn/\")",
+      "WebSearch",
+      "Bash(curl -s \"https://api.znqgj.com/api/gold/price\")",
+      "Bash(curl -s \"http://api.goldprice.org.cn/v1/gold\")",
+      "Bash(python3 -c \"import akshare as ak; print\\([x for x in dir\\(ak\\) if 'gold' in x.lower\\(\\) or 'spot' in x.lower\\(\\)]\\)\")",
+      "Bash(python3 -c \"import akshare as ak; df = ak.spot_golden_benchmark_sge\\(\\); print\\(df.columns.tolist\\(\\)\\); print\\(df\\)\")"
+    ]
+  }
+}

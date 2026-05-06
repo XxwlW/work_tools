@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f apa_map_visualizer)",
+      "Bash(python3 -c ' *)",
+      "Bash(python -m py_compile tools/map_replay.py)",
+      "Bash(python3 -m py_compile tools/map_replay.py)"
+    ]
+  }
+}
