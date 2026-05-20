@@ -1,0 +1,14 @@
+[Unit]
+Description=Gold Price Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=wang
+WorkingDirectory=/media/disk1/glod_project/gold_monitor
+ExecStart=/usr/bin/python3 monitor.py
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target

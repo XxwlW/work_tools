@@ -1,0 +1,16 @@
+{
+    "gold_api": {
+        "url": "https://hq.sinajs.cn/list=hf_GC",
+        "parse_pattern": "hq_str_hf_GC=\"([\\d.]+),"
+    },
+    "thresholds": {
+        "rise_percent": 0.1,
+        "fall_percent": 0.1
+    },
+    "notify": {
+        "pushplus_token": "b50ef1814c3949be9547e40013bfa431",
+        "enabled": true
+    },
+    "check_interval_minutes": 10,
+    "log_file": "/media/disk1/glod_project/gold_monitor/gold_monitor.log"
+}
