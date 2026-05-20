@@ -5,10 +5,13 @@
     },
     "thresholds": {
         "rise_percent": 0.1,
-        "fall_percent": 0.1
+        "fall_percent": 0.1,
+        "rise_absolute": 5,
+        "fall_absolute": 5
     },
     "notify": {
         "pushplus_token": "b50ef1814c3949be9547e40013bfa431",
+        "pushplus_topic": "test01",
         "enabled": true
     },
     "check_interval_minutes": 10,

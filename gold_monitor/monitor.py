@@ -44,31 +44,66 @@ def save_state(state):
 
 
 def get_gold_price(config):
-    df = ak.spot_golden_benchmark_sge()
-    latest = df.iloc[-1]
-    current_price = float(latest["晚盘价"])
-    base_price = float(latest["早盘价"])
+    # AU0 实时行情（沪金期货主力，元/克）
+    realtime_price = None
+    try:
+        df = ak.futures_zh_minute_sina(symbol="AU0", period="1")
+        latest = df.iloc[-1]
+        realtime_price = float(latest["close"])
+        logger.info(f"实时金价(AU0): {realtime_price} 元/克")
+    except Exception as e:
+        logger.warning(f"AU0 实时行情获取失败: {e}")
+
+    # USD/CNY 汇率（frankfurter 免费接口）
+    usd_cny = None
+    try:
+        r = requests.get("https://api.frankfurter.app/latest?from=USD&to=CNY", timeout=5)
+        usd_cny = r.json()["rates"]["CNY"]
+        logger.info(f"USD/CNY 汇率: {usd_cny}")
+    except Exception as e:
+        logger.warning(f"汇率获取失败: {e}")
+
+    # 国际金价（美元/盎司）
+    international_price = None
+    if realtime_price and usd_cny:
+        # 1 金衡盎司 = 31.1035 克
+        international_price = (realtime_price / usd_cny) * 31.1035
+        logger.info(f"国际金价: {international_price:.2f} 美元/盎司")
+
+    # 备用基准价
+    df_bench = ak.spot_golden_benchmark_sge()
+    bench_latest = df_bench.iloc[-1]
+    current_price = float(bench_latest["晚盘价"])
+    base_price = float(bench_latest["早盘价"])
     logger.info(
-        f"黄金数据: 时间={latest['交易时间']}, 晚盘价={latest['晚盘价']}, 早盘价={latest['早盘价']}"
+        f"基准价: 时间={bench_latest['交易时间']}, 晚盘价={bench_latest['晚盘价']}, 早盘价={bench_latest['早盘价']}"
     )
-    return current_price, base_price
+
+    price_to_use = realtime_price if realtime_price is not None else current_price
+    return price_to_use, base_price, international_price
 
 
-def send_notification(pushplus_token, title, content):
+def send_notification(token, title, content, msg_type="text", topic=None):
     url = "http://www.pushplus.plus/send"
     data = {
-        "token": pushplus_token,
+        "token": token,
         "title": title,
         "content": content,
-        "type": "text",
+        "type": msg_type,
     }
-    response = requests.post(url, json=data, timeout=10)
-    result = response.json()
-    if result.get("code") == 200:
-        logger.info(f"通知发送成功: {title}")
-        return True
-    else:
-        logger.error(f"通知发送失败: {result}")
+    if topic:
+        data["topic"] = topic
+    try:
+        response = requests.post(url, json=data, timeout=10)
+        result = response.json()
+        if result.get("code") == 200:
+            logger.info(f"通知发送成功: {title} -> topic={topic}")
+            return True
+        else:
+            logger.error(f"通知发送失败: {result}")
+            return False
+    except Exception as e:
+        logger.error(f"通知请求异常: {e}")
         return False
 
 
@@ -77,14 +112,21 @@ def periodic_report():
     notify_config = config["notify"]
     if not notify_config.get("enabled", True):
         return
+    token = notify_config.get("pushplus_token")
+    topic = notify_config.get("pushplus_topic")
+    if not token:
+        logger.warning("没有配置 pushplus_token")
+        return
     try:
-        price, base_price = get_gold_price(config)
+        price, base_price, intl_price = get_gold_price(config)
         change_percent = ((price - base_price) / base_price) * 100
         trend = "↑" if change_percent > 0 else "↓" if change_percent < 0 else "→"
+        intl_line = f"\n国际金价: {intl_price:.2f} 美元/盎司" if intl_price else ""
         send_notification(
-            notify_config["pushplus_token"],
+            token,
             f"金价定时推送 {trend} {abs(change_percent):.2f}%",
-            f"当前金价(晚盘) {price} 元\n基准价(早盘) {base_price} 元\n涨跌 {change_percent:+.2f}%\n时间: {datetime.now()}",
+            f"当前金价(AU0) {price} 元/克\n基准价(早盘) {base_price} 元/克\n涨跌 {change_percent:+.2f}%{intl_line}\n时间: {datetime.now()}",
+            topic=topic,
         )
     except Exception as e:
         logger.error(f"定时推送异常: {e}")
@@ -93,40 +135,67 @@ def periodic_report():
 def monitor():
     config = load_config()
     state = load_state()
+    last_price_from_state = state.get("last_price")
 
     try:
-        price, base_price = get_gold_price(config)
+        price, base_price, intl_price = get_gold_price(config)
         thresholds = config["thresholds"]
-        rise_percent = thresholds.get("rise_percent", 0.31)  # 默认5%涨幅
-        fall_percent = thresholds.get("fall_percent", 0.31)  # 默认5%跌幅
+        rise_percent = thresholds.get("rise_percent", 0.1)
+        fall_percent = thresholds.get("fall_percent", 0.1)
+        rise_absolute = thresholds.get("rise_absolute", 5)
+        fall_absolute = thresholds.get("fall_absolute", 5)
 
         change_percent = ((price - base_price) / base_price) * 100
         logger.info(
-            f"当前金价: {price}元, 基准价(早盘价): {base_price}元, 涨跌: {change_percent:.2f}%"
+            f"当前金价: {price}元, 基准价: {base_price}元, 涨跌: {change_percent:.2f}%"
         )
 
         notify_config = config["notify"]
+        token = notify_config.get("pushplus_token")
+        topic = notify_config.get("pushplus_topic")
+        intl_line = f"国际金价: {intl_price:.2f} 美元/盎司\n" if intl_price else ""
 
-        if notify_config.get("enabled", True):
-            # 涨幅超过阈值
+        if notify_config.get("enabled", True) and token:
+            if last_price_from_state is not None:
+                abs_change = price - last_price_from_state
+                if abs_change >= rise_absolute and not state.get("notified_rise_absolute"):
+                    send_notification(
+                        token,
+                        f"金价飙升 +{abs_change:.2f}元/克！",
+                        f"{intl_line}当前金价(AU0) {price} 元/克\n上次数值 {last_price_from_state} 元/克\n单次变动 +{abs_change:.2f} 元/克\n超过阈值 {rise_absolute} 元\n时间: {datetime.now()}",
+                        topic=topic,
+                    )
+                    state["notified_rise_absolute"] = True
+                elif abs_change <= -fall_absolute and not state.get("notified_fall_absolute"):
+                    send_notification(
+                        token,
+                        f"金价暴跌 {abs_change:.2f}元/克！",
+                        f"{intl_line}当前金价(AU0) {price} 元/克\n上次数值 {last_price_from_state} 元/克\n单次变动 {abs_change:.2f} 元/克\n超过阈值 {fall_absolute} 元\n时间: {datetime.now()}",
+                        topic=topic,
+                    )
+                    state["notified_fall_absolute"] = True
+                if abs(abs_change) < rise_absolute * 0.5:
+                    state.pop("notified_rise_absolute", None)
+                    state.pop("notified_fall_absolute", None)
+
             if change_percent >= rise_percent and not state["notified_high"]:
                 send_notification(
-                    notify_config["pushplus_token"],
+                    token,
                     f"金价上涨 {change_percent:.2f}%（警报）",
-                    f"当前金价(晚盘) {price} 元\n基准价(早盘) {base_price} 元\n上涨 {change_percent:.2f}%\n超过阈值 {rise_percent}%\n时间: {datetime.now()}",
+                    f"{intl_line}当前金价(AU0) {price} 元/克\n基准价(早盘) {base_price} 元/克\n上涨 {change_percent:.2f}%\n超过阈值 {rise_percent}%\n时间: {datetime.now()}",
+                    topic=topic,
                 )
                 state["notified_high"] = True
 
-            # 跌幅超过阈值
             elif change_percent <= -fall_percent and not state["notified_low"]:
                 send_notification(
-                    notify_config["pushplus_token"],
-                    f"金价下跌 {change_percent:.2f}%（警报）",
-                    f"当前金价(晚盘) {price} 元\n基准价(早盘) {base_price} 元\n下跌 {abs(change_percent):.2f}%\n超过阈值 {fall_percent}%\n时间: {datetime.now()}",
+                    token,
+                    f"金价下跌 {abs(change_percent):.2f}%（警报）",
+                    f"{intl_line}当前金价(AU0) {price} 元/克\n基准价(早盘) {base_price} 元/克\n下跌 {abs(change_percent):.2f}%\n超过阈值 {fall_percent}%\n时间: {datetime.now()}",
+                    topic=topic,
                 )
                 state["notified_low"] = True
 
-            # 回到正常区间，重置状态
             if -fall_percent < change_percent < rise_percent:
                 state["notified_high"] = False
                 state["notified_low"] = False
@@ -141,11 +210,11 @@ def monitor():
 def main():
     config = load_config()
     interval = config.get("check_interval_minutes", 5)
-
-    logger.info(f"金价监控启动，检查间隔 {interval} 分钟，超时 {TIMEOUT_MINUTES} 分钟")
+    token = config["notify"].get("pushplus_token")
+    topic = config["notify"].get("pushplus_topic")
+    logger.info(f"金价监控启动，检查间隔 {interval} 分钟，topic={topic}")
 
     last_price = None
-    last_change_time = time.time()
 
     monitor()
     schedule.every(interval).minutes.do(monitor)
@@ -153,23 +222,6 @@ def main():
 
     while True:
         schedule.run_pending()
-
-        current_price = None
-        try:
-            _, base_price = get_gold_price(config)
-            current_price = base_price
-        except:
-            pass
-
-        if current_price is not None and last_price is not None:
-            if current_price != last_price:
-                last_price = current_price
-                last_change_time = time.time()
-                logger.info(f"价格已更新: {current_price}")
-        elif current_price is not None:
-            last_price = current_price
-            last_change_time = time.time()
-
         time.sleep(30)
 
 
