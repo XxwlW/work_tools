@@ -1,0 +1,15 @@
+{
+  "showCLICommands": true,
+  "addExtensionsToInternalLinks": "html",
+  "injectAppCSS": "light",
+  "injectThemeCSS": false,
+  "customCSSFile": null,
+  "displayYAMLFrontmatter": false,
+  "linkStrippingBehaviour": "link",
+  "highDPIDiagrams": true,
+  "pandoc": "C:\\Users\\734-202307\\AppData\\Local\\Pandoc\\pandoc.exe",
+  "pdflatex": null,
+  "outputFolder": "R:\\王晓俊\\13_ObsidianProject\\导出文件",
+  "extraArguments": "--resource-path=\"R:\\王晓俊\\13_ObsidianProject\\工作笔记\\1.车位校正\\0.images\\\"",
+  "exportFrom": "md"
+}

@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "41ee8b27cc1916b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e5c3db5c6a3dfbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b001f95a871340ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 事件/022 事/脚本-4022.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "脚本-4022"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4d2a517993e04ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "832605645199e27a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06eae3ea590e51b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "127e299c36844d10",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          },
+          {
+            "id": "37775b0474afb1ea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "花云",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "54699cf7913e6847",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "cb0442af43bb683b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d3da74a59991c19e",
+    "type": "split",
+    "children": [
+      {
+        "id": "364544c0c51ec5c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ab9e07faac6a004",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02 事件/022 事/稿-4739.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "稿-4739 的反向链接列表"
+            }
+          },
+          {
+            "id": "6bccc204914149d3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 事件/022 事/PPT-4311.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "PPT-4311 的出链列表"
+            }
+          },
+          {
+            "id": "9dab97e2778be750",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4698d3e95ad13659",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01 日记/2025-05-09 周五.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2025-05-09 周五 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "quickadd:QuickAdd": false,
+      "cmdr:模板": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "b001f95a871340ed",
+  "lastOpenFiles": [
+    "04 项目/双拼选重.md",
+    "04 项目/双拼选重 1.md",
+    "04 项目/第一次.md",
+    "04 项目/编程/rime-㞢.md",
+    "04 项目/编程/拆字练习.md",
+    "03 人物/人/王雷.md",
+    "03 人物/钱包/抖音月付.md",
+    "03 人物/人/宋子皓.md",
+    "01 日记/2025-06-28 周六.md",
+    "02 事件/022 事/bugs-2925.md",
+    "02 事件/022 事/迷茫-2700.md",
+    "Excalidraw/隐帧现象.md",
+    "账本.md",
+    "01 日记/2025-06-27 周五.md",
+    "-1 附件/91宋先生.png",
+    "Excalidraw/说明.excalidraw.md",
+    "01 日记/改进方向-2832.md",
+    "04 项目/虎鹤双形.md",
+    "01 日记/2025-06-25 周三.md",
+    "03 人物/钱包/微信0991.md",
+    "钱包合集.md",
+    "2025-02-25 周二.md",
+    "03 人物/钱包/邮政银行.md",
+    "01 日记/2025-06-24 周二.md",
+    "01 日记/2025-06-18 周三.md",
+    "01 日记/2025-06-19 周四.md",
+    "01 日记/2025-05-24 周六.md",
+    "-1 附件/Pasted image 20250616114904.png",
+    "-1 附件/Pasted image 20250615224630.png",
+    "-1 附件/Pasted image 20250615224545.png",
+    "-1 附件/Pasted image 20250602150901.png",
+    "-1 附件/Pasted image 20250602150806.png",
+    "-1 附件/Pasted image 20250602145836.png",
+    "11 scripts/financial_report_zh_final_v12.html",
+    "11 scripts/people.csv",
+    "-1 附件/PixPin_2025-05-22_19-16-30.gif",
+    "Excalidraw/Scripts/Downloaded/Auto Layout.svg",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "-1 附件/Pasted Image 20250521141323_780.png",
+    "11 js",
+    "11 scripts/账本分析.py",
+    "11 scripts/a.py",
+    "11 scripts/New folder",
+    "未命名 3.canvas",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "04 项目/编程",
+    "Untitled.canvas",
+    "未命名.canvas",
+    "-1 附件/PinyinInput.mp4"
+  ]
+}

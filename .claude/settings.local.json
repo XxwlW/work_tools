@@ -7,7 +7,10 @@
       "Bash(curl -s \"https://api.znqgj.com/api/gold/price\")",
       "Bash(curl -s \"http://api.goldprice.org.cn/v1/gold\")",
       "Bash(python3 -c \"import akshare as ak; print\\([x for x in dir\\(ak\\) if 'gold' in x.lower\\(\\) or 'spot' in x.lower\\(\\)]\\)\")",
-      "Bash(python3 -c \"import akshare as ak; df = ak.spot_golden_benchmark_sge\\(\\); print\\(df.columns.tolist\\(\\)\\); print\\(df\\)\")"
+      "Bash(python3 -c \"import akshare as ak; df = ak.spot_golden_benchmark_sge\\(\\); print\\(df.columns.tolist\\(\\)\\); print\\(df\\)\")",
+      "Bash(robocopy \"C:/Users/Wang/.claude/\" \"D:/ClaudeConfig/\" /MIR /R:2 /W:2 /NFL /NDL /NP)",
+      "Bash(echo \"---exit=$?---\")",
+      "Bash(cmd //c \"robocopy \\\\\"C:\\\\\\\\Users\\\\\\\\Wang\\\\\\\\.claude\\\\\\\\\\\\\" \\\\\"D:\\\\\\\\ClaudeConfig\\\\\\\\\\\\\" /MIR /R:2 /W:2 /NFL /NDL /NP\")"
     ]
   }
 }

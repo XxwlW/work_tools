@@ -1,0 +1,4249 @@
+{
+  "requesterUsername": "XxwlW",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/72434271",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_44a39d0a-7ab0-4a2a-b6cf-0e30cb8f91a3",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 20
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 21
+            },
+            "text": "解析该项目，分析如何对上游数据进行可视化",
+            "kind": "text"
+          }
+        ],
+        "text": "解析该项目，分析如何对上游数据进行可视化"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "directory",
+            "id": "file:///media/disk/2818/src",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src",
+              "external": "file:///media/disk/2818/src",
+              "path": "/media/disk/2818/src",
+              "scheme": "file"
+            },
+            "name": "src"
+          },
+          {
+            "kind": "directory",
+            "id": "file:///media/disk/2818/tools",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools",
+              "external": "file:///media/disk/2818/tools",
+              "path": "/media/disk/2818/tools",
+              "scheme": "file"
+            },
+            "name": "tools"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "progressTaskSerialized",
+          "content": {
+            "value": "正在收集工作区信息",
+            "uris": {}
+          },
+          "progress": []
+        },
+        {
+          "kind": "progressTaskSerialized",
+          "content": {
+            "value": "正在筛选到最相关的信息",
+            "uris": {}
+          },
+          "progress": []
+        },
+        {
+          "value": "GitHub Copilot\n\n下面是对工程中“上游数据到可视化”路径的解析与可操作流程（简短、面向工程实践）。\n\n关键模块与文件（均为仓内路径，可点击打开）\n- 可视化工具总入口、构建配置： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 可视化程序主逻辑： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::main",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "0d0685b2-7af8-4cbf-823f-2f9884841075"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 实时订阅/反序列化入口（接收上游数据）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 数据记录（将接收流写入 multi-frame 文件）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::DataRecording",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a9de932c-6521-4379-8190-0818f4d81b35"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 单帧/回放逻辑： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlayBackSingleFrameAndAnimation",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 8,
+                "startColumn": 11,
+                "endLineNumber": 8,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "c02eca59-ce8d-4f5f-a872-ce60957c3c46"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- Hybrid-A* 回放： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlayBackHybridAStar",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "70e9bbc0-6700-48d3-920b-e599b9c49feb"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 可视化数据结构（protobuf）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::extra_plotdata::ExtraPlotData",
+            "kind": 4,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2486,
+                "startColumn": 7,
+                "endLineNumber": 2486,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+                "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+                "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8bc25c95-9a4d-41e5-93f0-0b5884c8c94a"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 上游发布端（将数据发给 plot_viewer）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- multi-frame 文件实现（写/读帧）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "external": "file:///media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "path": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- 从目标设备拉取记录数据（脚本）： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "external": "file:///media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "path": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- plot_viewer 配置： ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n\n总体工作流（最少步骤）\n1. 编译 plot_viewer / play_back 工具  \n   - 构建目标在 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "。在项目根或 build 目录使用 cmake，随后构建对应 target（示例命令见下）。\n2. 实时可视化（在线）  \n   - 上游模块将 protobuf/序列化数据通过 ZMQ 发布，发布实现位于 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "。  \n   - 运行可视化程序（plot_viewer），其通过 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 订阅并在 UI/绘图线程中显示（主逻辑在 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "）。\n3. 记录流以便离线回放  \n   - plot_viewer 中的记录线程由 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::DataRecording",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "dff07ce5-056a-45f4-974c-bf40390d53a6"
+        },
+        {
+          "value": " 控制，会把每帧数据写入 multi-frame 文件（使用 `MultiFrameFile`，定义见 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "external": "file:///media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "path": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "）。保存目录/开关在 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 中配置（字段如 kRecordDataFileDir、kEnableRecordDataToFile、kEnableRecordLogToFile）。\n4. 拉取/传输记录文件（从设备）  \n   - 若数据在目标板上，使用脚本 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "external": "file:///media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "path": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 将 /opt/planning/... 下的数据拉回到工作区 data 目录。\n5. 离线回放（播放已记录数据）  \n   - 使用 play_back 可执行文件（由 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 生成），回放逻辑在 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlayBackSingleFrameAndAnimation",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 8,
+                "startColumn": 11,
+                "endLineNumber": 8,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a265a049-e23a-4aa2-a83d-2882f6d574a9"
+        },
+        {
+          "value": " 与 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlayBackHybridAStar",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "3d077d7d-8dd4-45da-bfe6-1bc0e4080d9f"
+        },
+        {
+          "value": " 中。play_back 可以直接读取旧版单文件（data_N）或 multi-frame 文件并做 matplotlib 绘图（依赖 python matplotlib 绑定，见 CMake 链接 python3.7m）。\n\n关键注意点\n- 数据格式：plot_viewer 期望的消息类型是工程的 protobuf（例如 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ExtraPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2486,
+                "startColumn": 7,
+                "endLineNumber": 2486,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "00be66eb-5acb-48d9-b1f5-78e9912ad1cf"
+        },
+        {
+          "value": "），见 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "。SetPlotData 的反序列化逻辑在 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlotViewer::SetPlotData",
+            "kind": 4,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 15,
+                "startColumn": 7,
+                "endLineNumber": 15,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "366d07da-1312-4507-be51-2898414f0ef9"
+        },
+        {
+          "value": " / ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（打开查看）；\n- 依赖：绘图使用 matplotlib-cpp + Python，构建时要确保系统 Python 与 matplotlib 可用（CMake 中链接 python3.7m），否则只能记录但无法绘图；\n- 兼容旧/新数据：playback 里有对旧单文件（data_N）和 multi-frame 文件的兼容判断（查看 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "）；\n- 若需要把其它上游模块数据接入：让上游发布符合 protobuf 定义的序列化数据或采用与 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 相同的消息格式/主题。\n\n快速命令（在项目根或 build 目录）\n```sh\n# 进入项目顶层 build（或新建）\nmkdir -p build && cd build\ncmake .. \n# 构建 plot_viewer 与 play_back\ncmake --build . --target plot_viewer -- -j4\ncmake --build . --target play_back -- -j4\n\n# 运行实时可视化（在发布端运行后启动）\n./tools/plot_viewer/plot_viewer\n\n# 离线回放（示例，具体参数看二进制帮助或 main_playback.cpp）\n./tools/plot_viewer/play_back /path/to/data_folder frame_number\n\n# 从目标板拉数据回工作区\n./script_x86/tda4vl_scp/retrieve_data_for_playback.sh <start> <end>\n```\n\n下一步建议（可选、按需选择）\n- 若上游不是以当前 protobuf 格式发送，添加一个适配层把上游消息转换为 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ExtraPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2486,
+                "startColumn": 7,
+                "endLineNumber": 2486,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "77eae15b-a2ca-4141-b517-c45290223582"
+        },
+        {
+          "value": "（参考 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "），并让上游发布到与 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 相同的 ZMQ 主题/端口。\n- 如需更灵活的回放脚本，可扩展 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 中的帧选择逻辑或写一个小脚本批量调用 play_back。\n- 若 matplotlib 环境问题，先确认 CMake 中 python 链接并在系统中安装 matplotlib。\n\n如果你希望我给出\n- 一份最小化的“把任意上游 JSON->protobuf->plot_viewer 发布”的适配示例，或\n- 一个批量回放脚本（遍历 multi-frame 文件并生成 PNG），\n\n我可以基于上面列到的文件生成具体代码/脚本（会在回复中附带对应文件的路径链接）。",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_8a68d9f4-0128-4362-9d55-1fec02b0a676",
+      "result": {
+        "timings": {
+          "firstProgress": 61079,
+          "totalElapsed": 93025
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "# 进入项目顶层 build（或新建）\nmkdir -p build && cd build\ncmake .. \n# 构建 plot_viewer 与 play_back\ncmake --build . --target plot_viewer -- -j4\ncmake --build . --target play_back -- -j4\n\n# 运行实时可视化（在发布端运行后启动）\n./tools/plot_viewer/plot_viewer\n\n# 离线回放（示例，具体参数看二进制帮助或 main_playback.cpp）\n./tools/plot_viewer/play_back /path/to/data_folder frame_number\n\n# 从目标板拉数据回工作区\n./script_x86/tda4vl_scp/retrieve_data_for_playback.sh <start> <end>\n",
+              "language": "sh",
+              "markdownBeforeBlock": "GitHub Copilot\n\n下面是对工程中“上游数据到可视化”路径的解析与可操作流程（简短、面向工程实践）。\n\n关键模块与文件（均为仓内路径，可点击打开）\n- 可视化工具总入口、构建配置： \n- 可视化程序主逻辑：  — \n- 实时订阅/反序列化入口（接收上游数据）： \n- 数据记录（将接收流写入 multi-frame 文件）：  — \n- 单帧/回放逻辑：  — \n- Hybrid-A* 回放：  — \n- 可视化数据结构（protobuf）：  — \n- 上游发布端（将数据发给 plot_viewer）： \n- multi-frame 文件实现（写/读帧）： \n- 从目标设备拉取记录数据（脚本）： \n- plot_viewer 配置： \n\n总体工作流（最少步骤）\n1. 编译 plot_viewer / play_back 工具  \n   - 构建目标在 。在项目根或 build 目录使用 cmake，随后构建对应 target（示例命令见下）。\n2. 实时可视化（在线）  \n   - 上游模块将 protobuf/序列化数据通过 ZMQ 发布，发布实现位于 。  \n   - 运行可视化程序（plot_viewer），其通过  订阅并在 UI/绘图线程中显示（主逻辑在 ）。\n3. 记录流以便离线回放  \n   - plot_viewer 中的记录线程由  控制，会把每帧数据写入 multi-frame 文件（使用 `MultiFrameFile`，定义见 ）。保存目录/开关在  中配置（字段如 kRecordDataFileDir、kEnableRecordDataToFile、kEnableRecordLogToFile）。\n4. 拉取/传输记录文件（从设备）  \n   - 若数据在目标板上，使用脚本  将 /opt/planning/... 下的数据拉回到工作区 data 目录。\n5. 离线回放（播放已记录数据）  \n   - 使用 play_back 可执行文件（由  生成），回放逻辑在  与  中。play_back 可以直接读取旧版单文件（data_N）或 multi-frame 文件并做 matplotlib 绘图（依赖 python matplotlib 绑定，见 CMake 链接 python3.7m）。\n\n关键注意点\n- 数据格式：plot_viewer 期望的消息类型是工程的 protobuf（例如 ），见 。SetPlotData 的反序列化逻辑在  / （打开查看）；\n- 依赖：绘图使用 matplotlib-cpp + Python，构建时要确保系统 Python 与 matplotlib 可用（CMake 中链接 python3.7m），否则只能记录但无法绘图；\n- 兼容旧/新数据：playback 里有对旧单文件（data_N）和 multi-frame 文件的兼容判断（查看 ）；\n- 若需要把其它上游模块数据接入：让上游发布符合 protobuf 定义的序列化数据或采用与  相同的消息格式/主题。\n\n快速命令（在项目根或 build 目录）\n"
+            }
+          ],
+          "toolCallRounds": [
+            {
+              "response": "GitHub Copilot\n\n下面是对工程中“上游数据到可视化”路径的解析与可操作流程（简短、面向工程实践）。\n\n关键模块与文件（均为仓内路径，可点击打开）\n- 可视化工具总入口、构建配置： [tools/plot_viewer/CMakeLists.txt](tools/plot_viewer/CMakeLists.txt)\n- 可视化程序主逻辑： [`tte::planning::plotviewer::main`](tools/plot_viewer/src/main.cpp) — [tools/plot_viewer/src/main.cpp](tools/plot_viewer/src/main.cpp)\n- 实时订阅/反序列化入口（接收上游数据）： [`tools/plot_viewer/src/zmq_subscriber.cpp`](tools/plot_viewer/src/zmq_subscriber.cpp)\n- 数据记录（将接收流写入 multi-frame 文件）： [`tte::planning::plotviewer::DataRecording`](tools/plot_viewer/src/data_record.cpp) — [tools/plot_viewer/src/data_record.cpp](tools/plot_viewer/src/data_record.cpp)\n- 单帧/回放逻辑： [`tte::planning::plotviewer::PlayBackSingleFrameAndAnimation`](tools/plot_viewer/src/playback_single_frame.cpp) — [tools/plot_viewer/src/playback_single_frame.cpp](tools/plot_viewer/src/playback_single_frame.cpp)\n- Hybrid-A* 回放： [`tte::planning::plotviewer::PlayBackHybridAStar`](tools/plot_viewer/src/main_playback_hybrid_a_star.cpp) — [tools/plot_viewer/src/main_playback_hybrid_a_star.cpp](tools/plot_viewer/src/main_playback_hybrid_a_star.cpp)\n- 可视化数据结构（protobuf）： [`tte::planning::extra_plotdata::ExtraPlotData`](src/proto/extra_plot_data.pb.h) — [src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)\n- 上游发布端（将数据发给 plot_viewer）： [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp)\n- multi-frame 文件实现（写/读帧）： [src/common/multi_frame_file/multi_frame_file.h](src/common/multi_frame_file/multi_frame_file.h)\n- 从目标设备拉取记录数据（脚本）： [script_x86/tda4vl_scp/retrieve_data_for_playback.sh](script_x86/tda4vl_scp/retrieve_data_for_playback.sh)\n- plot_viewer 配置： [tools/plot_viewer/src/plot_viewer_config.h](tools/plot_viewer/src/plot_viewer_config.h)\n\n总体工作流（最少步骤）\n1. 编译 plot_viewer / play_back 工具  \n   - 构建目标在 [tools/plot_viewer/CMakeLists.txt](tools/plot_viewer/CMakeLists.txt)。在项目根或 build 目录使用 cmake，随后构建对应 target（示例命令见下）。\n2. 实时可视化（在线）  \n   - 上游模块将 protobuf/序列化数据通过 ZMQ 发布，发布实现位于 [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp)。  \n   - 运行可视化程序（plot_viewer），其通过 [tools/plot_viewer/src/zmq_subscriber.cpp](tools/plot_viewer/src/zmq_subscriber.cpp) 订阅并在 UI/绘图线程中显示（主逻辑在 [tools/plot_viewer/src/main.cpp](tools/plot_viewer/src/main.cpp)）。\n3. 记录流以便离线回放  \n   - plot_viewer 中的记录线程由 [`tte::planning::plotviewer::DataRecording`](tools/plot_viewer/src/data_record.cpp) 控制，会把每帧数据写入 multi-frame 文件（使用 `MultiFrameFile`，定义见 [src/common/multi_frame_file/multi_frame_file.h](src/common/multi_frame_file/multi_frame_file.h)）。保存目录/开关在 [tools/plot_viewer/src/plot_viewer_config.h](tools/plot_viewer/src/plot_viewer_config.h) 中配置（字段如 kRecordDataFileDir、kEnableRecordDataToFile、kEnableRecordLogToFile）。\n4. 拉取/传输记录文件（从设备）  \n   - 若数据在目标板上，使用脚本 [script_x86/tda4vl_scp/retrieve_data_for_playback.sh](script_x86/tda4vl_scp/retrieve_data_for_playback.sh) 将 /opt/planning/... 下的数据拉回到工作区 data 目录。\n5. 离线回放（播放已记录数据）  \n   - 使用 play_back 可执行文件（由 [tools/plot_viewer/CMakeLists.txt](tools/plot_viewer/CMakeLists.txt) 生成），回放逻辑在 [`tte::planning::plotviewer::PlayBackSingleFrameAndAnimation`](tools/plot_viewer/src/playback_single_frame.cpp) 与 [`tte::planning::plotviewer::PlayBackHybridAStar`](tools/plot_viewer/src/main_playback_hybrid_a_star.cpp) 中。play_back 可以直接读取旧版单文件（data_N）或 multi-frame 文件并做 matplotlib 绘图（依赖 python matplotlib 绑定，见 CMake 链接 python3.7m）。\n\n关键注意点\n- 数据格式：plot_viewer 期望的消息类型是工程的 protobuf（例如 `ExtraPlotData`），见 [src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)。SetPlotData 的反序列化逻辑在 [`tte::planning::plotviewer::PlotViewer::SetPlotData`](tools/plot_viewer/src/plot_viewer.h) / [tools/plot_viewer/src/plot_viewer.cpp](tools/plot_viewer/src/plot_viewer.cpp)（打开查看）；\n- 依赖：绘图使用 matplotlib-cpp + Python，构建时要确保系统 Python 与 matplotlib 可用（CMake 中链接 python3.7m），否则只能记录但无法绘图；\n- 兼容旧/新数据：playback 里有对旧单文件（data_N）和 multi-frame 文件的兼容判断（查看 [tools/plot_viewer/src/playback_single_frame.cpp](tools/plot_viewer/src/playback_single_frame.cpp)）；\n- 若需要把其它上游模块数据接入：让上游发布符合 protobuf 定义的序列化数据或采用与 [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp) 相同的消息格式/主题。\n\n快速命令（在项目根或 build 目录）\n```sh\n# 进入项目顶层 build（或新建）\nmkdir -p build && cd build\ncmake .. \n# 构建 plot_viewer 与 play_back\ncmake --build . --target plot_viewer -- -j4\ncmake --build . --target play_back -- -j4\n\n# 运行实时可视化（在发布端运行后启动）\n./tools/plot_viewer/plot_viewer\n\n# 离线回放（示例，具体参数看二进制帮助或 main_playback.cpp）\n./tools/plot_viewer/play_back /path/to/data_folder frame_number\n\n# 从目标板拉数据回工作区\n./script_x86/tda4vl_scp/retrieve_data_for_playback.sh <start> <end>\n```\n\n下一步建议（可选、按需选择）\n- 若上游不是以当前 protobuf 格式发送，添加一个适配层把上游消息转换为 `ExtraPlotData`（参考 [src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)），并让上游发布到与 [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp) 相同的 ZMQ 主题/端口。\n- 如需更灵活的回放脚本，可扩展 `playback_single_frame.cpp` 中的帧选择逻辑或写一个小脚本批量调用 play_back。\n- 若 matplotlib 环境问题，先确认 CMake 中 python 链接并在系统中安装 matplotlib。\n\n如果你希望我给出\n- 一份最小化的“把任意上游 JSON->protobuf->plot_viewer 发布”的适配示例，或\n- 一个批量回放脚本（遍历 multi-frame 文件并生成 PNG），\n\n我可以基于上面列到的文件生成具体代码/脚本（会在回复中附带对应文件的路径链接）。",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "05cccfb6-030d-40fb-93d9-ec14625bce10"
+            }
+          ],
+          "modelMessageId": "c24838fd-7e21-4fdf-b146-776ee21ab375",
+          "responseId": "2bc82418-0fba-4f0c-bf2b-866dfb80d9ea",
+          "sessionId": "84c3e770-cf9c-4840-a3ec-4900c42172a6",
+          "agentId": "github.copilot.workspace"
+        },
+        "details": "GPT-5 mini • 1x"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-ba886bc9-c8ba-4978-8933-451671062b49"
+        }
+      ],
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.32.4",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "询问工作区",
+        "when": "!github.copilot.interactiveSession.disabled",
+        "metadata": {
+          "sampleRequest": "如何生成此项目?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent",
+          "ask",
+          "edit"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "说明活动编辑器中代码的工作原理"
+          },
+          {
+            "name": "tests",
+            "description": "为所选代码生成单元测试",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "对所选代码中的问题提出修复建议",
+            "sampleRequest": "此代码中存在问题。重写代码以在修复 bug 时显示它。"
+          },
+          {
+            "name": "new",
+            "description": "工作区中的新文件或项目的基架代码",
+            "sampleRequest": "使用 typescript 创建 RESTful API 服务器",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "创建新 Jupyter Notebook",
+            "sampleRequest": "如何创建笔记本以从 csv 文件加载数据?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "在项目中设置测试(实验性)",
+            "sampleRequest": "将 playwright 测试添加到我的项目",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/.vscode/settings.json",
+              "external": "file:///media/disk/2818/.vscode/settings.json",
+              "path": "/media/disk/2818/.vscode/settings.json",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 116,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/.vscode/settings copy.json",
+              "external": "file:///media/disk/2818/.vscode/settings%20copy.json",
+              "path": "/media/disk/2818/.vscode/settings copy.json",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 87,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+              "external": "file:///media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+              "path": "/media/disk/2818/script_x86/tda4vl_scp/retrieve_data_for_playback.sh",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 30,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/CMakeLists.txt",
+              "external": "file:///media/disk/2818/src/CMakeLists.txt",
+              "path": "/media/disk/2818/src/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 55,
+              "startColumn": 1,
+              "endLineNumber": 264,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/common/json_parse.cpp",
+              "external": "file:///media/disk/2818/src/common/json_parse.cpp",
+              "path": "/media/disk/2818/src/common/json_parse.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 43,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 2476,
+              "startColumn": 1,
+              "endLineNumber": 5151,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tests/ipopt_test/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tests/ipopt_test/CMakeLists.txt",
+              "path": "/media/disk/2818/tests/ipopt_test/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 2,
+              "startColumn": 1,
+              "endLineNumber": 41,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/third_party_x86_linux_libs/libboost_serialization.so.1.66.0",
+              "external": "file:///media/disk/2818/third_party_x86_linux_libs/libboost_serialization.so.1.66.0",
+              "path": "/media/disk/2818/third_party_x86_linux_libs/libboost_serialization.so.1.66.0",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 818,
+              "startColumn": 1,
+              "endLineNumber": 818,
+              "endColumn": 1001
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "external": "file:///media/disk/2818/third_party_x86_linux_libs/libzmq.so.5.2.5",
+              "path": "/media/disk/2818/third_party_x86_linux_libs/libzmq.so.5.2.5",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 3505,
+              "startColumn": 1,
+              "endLineNumber": 3505,
+              "endColumn": 1001
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "external": "file:///media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "path": "/media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 83,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 26,
+              "startColumn": 1,
+              "endLineNumber": 91,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 168,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 27,
+              "startColumn": 1,
+              "endLineNumber": 302,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 39,
+              "startColumn": 1,
+              "endLineNumber": 123,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 213,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "path": "/media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 2,
+              "startColumn": 1,
+              "endLineNumber": 51,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "variableName": "tools"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "variableName": "src"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1762583833365,
+      "modelId": "copilot/gpt-5-mini"
+    },
+    {
+      "requestId": "request_0183d1f3-9023-4059-9f71-70ba73ed7d53",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 20
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 21
+            },
+            "text": "解析plot_viewer实现的具体流程",
+            "kind": "text"
+          }
+        ],
+        "text": "解析plot_viewer实现的具体流程"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "directory",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer",
+              "external": "file:///media/disk/2818/tools/plot_viewer",
+              "path": "/media/disk/2818/tools/plot_viewer",
+              "scheme": "file"
+            },
+            "id": "file:///media/disk/2818/tools/plot_viewer",
+            "name": "plot_viewer",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.file",
+            "name": "file:main.cpp",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+              "scheme": "file"
+            },
+            "modelDescription": "User's active file"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "progressTaskSerialized",
+          "content": {
+            "value": "正在收集工作区信息",
+            "uris": {}
+          },
+          "progress": []
+        },
+        {
+          "kind": "progressTaskSerialized",
+          "content": {
+            "value": "正在筛选到最相关的信息",
+            "uris": {}
+          },
+          "progress": []
+        },
+        {
+          "value": "GitHub Copilot\n\n下面给出 plot_viewer 的实现流程要点与关键代码位置（短、精确、可跳转）。\n\n总体架构（高层流程）\n1. 上游（planning 进程）把调试数据打包到一个本地 PlotData 对象，使用 Boost binary 序列化后通过 ZMQ 发送出去。关键生成/发送代码见：\n   - 上游序列化并发送：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ZmqPublisher::DebugDataSerializationAndSend",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+                "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+                "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "0ffaade5-2595-4363-a9cf-a8d8c68a123f"
+        },
+        {
+          "value": " (src/data_exchange/zmq_publisher.cpp)  \n   - 上游构建 PlotData：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataCollector::CollectDataSaveLocalAndSendByZMQ",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+                "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "665f4e4a-b9f1-4208-b92d-b5efda8b20b0"
+        },
+        {
+          "value": " 和 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataCollector::CollectDataAndSendByZMQ",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+                "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b84d992b-cc6e-4020-8cb1-b329e3536ecd"
+        },
+        {
+          "value": "（生成 plot_data_、data_for_reinject_、extral_data_ 等字段）  \n     - 文件：src/data_exchange/data_collector.cpp  \n     - PlotData 定义：src/data_exchange/plot_data.h (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 107,
+                "startColumn": 7,
+                "endLineNumber": 107,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/plot_data.h",
+                "external": "file:///media/disk/2818/src/data_exchange/plot_data.h",
+                "path": "/media/disk/2818/src/data_exchange/plot_data.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "6cbaefc4-1b3e-4584-99ce-0f5b87d087ba"
+        },
+        {
+          "value": ")\n\n2. plot_viewer 端接收、反序列化并绘图（两个线程：DataRecording 线程 + 主线程 UI 循环）：\n   - 启动点：程序入口 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（当前打开文件）。主流程：\n     - 先加载配置与车辆参数（LoadCommonConfigs / VehicleConfigHelper::Init）。\n     - 启动数据记录线程：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::DataRecording",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "2fe13555-e69a-4254-a1ac-7beeb4956cc0"
+        },
+        {
+          "value": "（线程函数）。\n     - 在主循环中通过互斥锁从 DataRecording 线程复制共享的 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_data",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 30,
+                "startColumn": 10,
+                "endLineNumber": 30,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "cc532ed0-9a37-401d-b4c0-0fb6fcc481d8"
+        },
+        {
+          "value": " 到 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_viewer.plot_data_",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 68,
+                "startColumn": 14,
+                "endLineNumber": 68,
+                "endColumn": 14
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "82cd19f6-d3e0-4174-8d63-08ba28e0e16c"
+        },
+        {
+          "value": "，当 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "new_data_came",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 31,
+                "startColumn": 6,
+                "endLineNumber": 31,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ab6f0f82-ac96-4a5e-b93c-cd1ea4d490c1"
+        },
+        {
+          "value": " 为 true 时触发绘图：[`main.cpp` 主循环](tools/plot_viewer/src/main.cpp)。\n\n3. DataRecording 线程（接收 + 存盘 + 通知主线程）：\n   - 文件/函数：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::DataRecording",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "39ff802e-4743-442e-88eb-eb0a91502c66"
+        },
+        {
+          "value": " (tools/plot_viewer/src/data_record.cpp)\n   - 步骤：\n     - 使用 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ZmqSubcriber::RecData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "55e7fd2f-16f5-442f-9716-50af4ca5259f"
+        },
+        {
+          "value": " 接收 ZMQ 字节流（字符串）。\n     - 把接收到的字节流传给 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::SetPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "30846a7c-2e53-4c36-9f38-0b2a6393886e"
+        },
+        {
+          "value": " 做 Boost binary 反序列化（ia >> plot_data_）。\n     - 将反序列化后的 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_viewer.plot_data_",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 68,
+                "startColumn": 14,
+                "endLineNumber": 68,
+                "endColumn": 14
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "7164474a-0fe5-4b9f-9bfd-c7d6d7a9c513"
+        },
+        {
+          "value": " 复制到全局 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_data",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 30,
+                "startColumn": 10,
+                "endLineNumber": 30,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "ec0398b4-d7a9-44f4-b1a6-5e54db1116c2"
+        },
+        {
+          "value": "，置标志 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "new_data_came = true",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 31,
+                "startColumn": 6,
+                "endLineNumber": 31,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b287b56a-9ba2-4786-a6e5-2a9ba6cf4792"
+        },
+        {
+          "value": "（由主线程读取）。\n     - 若配置允许，则把帧数据写入 multi-frame 文件：使用 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "external": "file:///media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "path": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 的 `AddFrame`（见 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 中 MultiFrameFile 使用）。\n     - （可选）保存 log 到文件。\n\n4. PlotViewer（绘图逻辑）：\n   - 类/文件：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlotViewer",
+            "kind": 4,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 15,
+                "startColumn": 7,
+                "endLineNumber": 15,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b27622a3-55cd-4a8c-bdc6-45c5b6058488"
+        },
+        {
+          "value": " 与实现 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "。\n   - 关键接口：\n     - ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::SetPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "97d5c0e6-673c-497e-88af-8f4d90a56013"
+        },
+        {
+          "value": " —— 从 std::stringstream 用 Boost binary_iarchive 反序列化到 `plot_data_`（PlotData）。\n     - ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::ParseExtralPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "66b811fb-c97c-4f8b-bb68-4ba8684c0d52"
+        },
+        {
+          "value": " —— 若 `plot_data_.extral_data_` 中有 protobuf（例如 `extra_plotdata::ExtraPlotData`），用 ParseFromArray 解析（见 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "）。\n     - ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::PlotAll",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "70f52fd4-1232-49c0-9160-777bf7aff034"
+        },
+        {
+          "value": " —— 顶层绘制控制：先尝试解析 extral plot data（若存在则走停车图序列），否则按配置绘制 XY/SL/ST/VT/VS 等 figures。\n     - 动画与细节绘制：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::PlayAnimationSmoothedResult",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "5988264b-71bf-4d03-a876-29f3946dc481"
+        },
+        {
+          "value": "、",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::PlotParkingView",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d700d926-aadd-4619-9eb5-707b959c8bdf"
+        },
+        {
+          "value": "、以及大量 Plot* 函数（PlotGlobalPathXY、PlotObstaclesXY、PlotOutPutTrajectoryXY、PlotKappaFigure 等）。\n   - 绘图库封装：使用 Matplot 封装类 `MatplotApi`（内部调用 third_party matplotlibcpp），接口如 `Plot2D`, `PlotShow`, `Pause` 等。\n\n5. 回放（离线播放）：\n   - 回放加载单帧数据：tools/plot_viewer/src/playback_single_frame.cpp。函数：\n     - ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlayBackSingleFrameAndAnimation",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 14,
+                "startColumn": 6,
+                "endLineNumber": 14,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d8969243-9ced-47be-b9a1-f9dd38aa3eb9"
+        },
+        {
+          "value": " / ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlayBackSingleFrame",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 69,
+                "startColumn": 6,
+                "endLineNumber": 69,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "44c1000c-6ae7-4025-bca8-9753ad4e3cbd"
+        },
+        {
+          "value": "：支持从 MultiFrameFile（优先）或旧版单文件（data_N）读取数据，然后调用 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_viewer.SetPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 44,
+                "startColumn": 14,
+                "endLineNumber": 44,
+                "endColumn": 14
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "37656f32-def4-4ff5-94e7-72033e2c240c"
+        },
+        {
+          "value": " 并 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotAll",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 43,
+                "startColumn": 18,
+                "endLineNumber": 43,
+                "endColumn": 18
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f11ad4de-59ad-49a3-af53-0315c4ecfec8"
+        },
+        {
+          "value": " 或 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlayAnimationSmoothedResult",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1855,
+                "startColumn": 18,
+                "endLineNumber": 1855,
+                "endColumn": 18
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "48ea9df5-5a18-493e-ac8f-7146c2de0af4"
+        },
+        {
+          "value": "。\n     - 帧存在检查：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "CheckIfThisFrameExist",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 145,
+                "startColumn": 6,
+                "endLineNumber": 145,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "51d9620e-8201-488c-a69e-6bbf057c2ba0"
+        },
+        {
+          "value": "、查找下一个/上一个可用帧等函数也在该文件。\n\n关键交互关系（简短）\n- 上游构建 PlotData -> Boost 序列化 -> ZMQ 发出  \n  (上游代码位于：src/data_exchange/data_collector.cpp 与 src/data_exchange/zmq_publisher.cpp)\n- plot_viewer 的 DataRecording 通过 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ZmqSubcriber",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8bd108a5-212c-4f51-a40e-04f16cf0b01d"
+        },
+        {
+          "value": " 接收 -> `PlotViewer::SetPlotData` 反序列化到 `plot_data_` -> 复制到主线程可见的 `plot_data`，触发绘图\n- 如果 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_data_.extral_data_",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 62,
+                "startColumn": 12,
+                "endLineNumber": 62,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "51949194-fe84-458f-b884-72b90940b683"
+        },
+        {
+          "value": " 包含 protobuf（extra_plotdata），PlotViewer 通过 protobuf API 解析并绘制停车视图（src/proto/extra_plot_data.pb.h）\n\n主要相关文件和符号（可点开）\n- 程序入口 / 主循环：tools/plot_viewer/src/main.cpp (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "main",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 39,
+                "startColumn": 5,
+                "endLineNumber": 39,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "4ac7ac94-04d3-4503-b665-d966a140c225"
+        },
+        {
+          "value": ") — 当前打开文件  \n- 数据记录线程：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::DataRecording",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 16,
+                "startColumn": 11,
+                "endLineNumber": 16,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "920de66c-b71d-4317-b63d-a10975ac0505"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "  \n- ZMQ 订阅实现：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::ZmqSubcriber",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 9,
+                "startColumn": 11,
+                "endLineNumber": 9,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "7cb2f906-2677-4e63-9a09-0f7701f915cb"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "  \n- PlotViewer 类与方法：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlotViewer::SetPlotData",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 13,
+                "startColumn": 11,
+                "endLineNumber": 13,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a032b3fe-4c84-4468-a6e8-822610716669"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlotViewer::PlotAll",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 13,
+                "startColumn": 11,
+                "endLineNumber": 13,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "626d9f22-193a-420e-a424-c86a4d2a9b2f"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "tte::planning::plotviewer::PlotViewer::PlayAnimationSmoothedResult",
+            "kind": 2,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 13,
+                "startColumn": 11,
+                "endLineNumber": 13,
+                "endColumn": 11
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "50e38c7d-ec1f-4c42-b077-6303af8ee544"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " / ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "  \n- Matplot 封装：",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "MatplotApi",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "2881e824-75a3-4ce0-a7f2-42c9010ef079"
+        },
+        {
+          "value": " — ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " / ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/matplot_api.h",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/matplot_api.h",
+            "path": "/media/disk/2818/tools/plot_viewer/src/matplot_api.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "  \n- Multi-frame 存取：src/common/multi_frame_file/multi_frame_file.h（DataRecording 使用）  \n- 上游发送端（供比对）：src/data_exchange/zmq_publisher.cpp 与 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+            "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（序列化 PlotData）  \n- Protobuf 解析（extra_plotdata）：src/proto/extra_plot_data.pb.h；reinject 数据：src/proto/data_reinjection/reinjection_data.pb.h\n\n快速定位路径（一次性列表）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataRecording",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 35,
+                "startColumn": 6,
+                "endLineNumber": 35,
+                "endColumn": 6
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "e036e801-9ba7-4f13-aa7f-de462ec6347c"
+        },
+        {
+          "value": ")  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ZmqSubcriber::RecData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 12,
+                "startColumn": 7,
+                "endLineNumber": 12,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.h",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "2fb7aead-fa9d-4e96-af83-17097290d33d"
+        },
+        {
+          "value": ")  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " (",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotViewer::SetPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 15,
+                "startColumn": 7,
+                "endLineNumber": 15,
+                "endColumn": 7
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "fbe535ec-43b2-4e19-b599-e66419bafd89"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlotAll",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 43,
+                "startColumn": 18,
+                "endLineNumber": 43,
+                "endColumn": 18
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f8dd57a7-f9f3-4531-9dac-d5acf8d72cac"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "PlayAnimationSmoothedResult",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1855,
+                "startColumn": 18,
+                "endLineNumber": 1855,
+                "endColumn": 18
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "3dad5da7-f6e3-4a0c-acd8-00e6a60ae8d7"
+        },
+        {
+          "value": ", 各 Plot* 函数)  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（绘图封装）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（离线回放）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（上游发送）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+            "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+            "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（构造 PlotData，包括 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "CollectDataForReinject",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 805,
+                "startColumn": 21,
+                "endLineNumber": 805,
+                "endColumn": 21
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+                "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a3c0b263-ab85-4725-8c66-4b9d96d48126"
+        },
+        {
+          "value": "）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/data_exchange/plot_data.h",
+            "external": "file:///media/disk/2818/src/data_exchange/plot_data.h",
+            "path": "/media/disk/2818/src/data_exchange/plot_data.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（PlotData 结构）  \n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "external": "file:///media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "path": "/media/disk/2818/src/common/multi_frame_file/multi_frame_file.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "（multi-frame 存储）\n\n如何扩展 / 排错要点（简短）\n- 若上游要可视化新字段：在上游填充 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_data_",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 140,
+                "startColumn": 9,
+                "endLineNumber": 140,
+                "endColumn": 9
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+                "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f6a52c53-8d6b-4aad-b0b0-31bb75697fab"
+        },
+        {
+          "value": "（或将自定义 protobuf 写入 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "plot_data_.extral_data_",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 62,
+                "startColumn": 12,
+                "endLineNumber": 62,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "1175bc57-e07a-4f4e-b113-df7423280b72"
+        },
+        {
+          "value": "），确保 plot_viewer 能解析（",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ParseExtralPlotData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1033,
+                "startColumn": 18,
+                "endLineNumber": 1033,
+                "endColumn": 18
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "fdc7699b-9466-46cc-88ab-7441981d2b69"
+        },
+        {
+          "value": "）并在 [`PlotViewer::Plot*`] 中绘制。参考：src/data_exchange/data_collector.cpp 的 `CollectParkingPlotData` 用法，以及 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 的消息定义。  \n- 若 plot_viewer 收不到数据：确认 ZMQ 地址/端口 与 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " 配置一致，并检查 ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "ZmqSubcriber::RecData",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "84071090-6f1c-4aea-9643-b7c9a4caec54"
+        },
+        {
+          "value": " 的接收超时。  \n- 若绘图失败或 matplotlib 问题：确认 CMake 链接的 Python/Matplotlib（CMakeLists.txt 指向 python3.7m），并检查 `MatplotApi` 输出。\n\n需要我做什么下一步？（可选，选一个）\n- 给出「如何把一个 JSON → protobuf(ExtraPlotData) → 发送到 plot_viewer」的最小示例代码（上游适配器）。  \n- 给出批量把 multi-frame 文件导出成 PNG 的回放脚本（基于现有 playback 逻辑）。  \n\n请选择一个，我会把对应的示例代码或脚本贴到工作区文件中，并附上修改位置链接。",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/media/disk/2818/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_6db434c8-e141-4ca1-ae0f-114ab6bf3b6a",
+      "result": {
+        "timings": {
+          "firstProgress": 43264,
+          "totalElapsed": 121554
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "toolCallRounds": [
+            {
+              "response": "GitHub Copilot\n\n下面给出 plot_viewer 的实现流程要点与关键代码位置（短、精确、可跳转）。\n\n总体架构（高层流程）\n1. 上游（planning 进程）把调试数据打包到一个本地 PlotData 对象，使用 Boost binary 序列化后通过 ZMQ 发送出去。关键生成/发送代码见：\n   - 上游序列化并发送：[`ZmqPublisher::DebugDataSerializationAndSend`](src/data_exchange/zmq_publisher.cpp) ([src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp))  \n   - 上游构建 PlotData：[`DataCollector::CollectDataSaveLocalAndSendByZMQ`](src/data_exchange/data_collector.cpp) 和 [`DataCollector::CollectDataAndSendByZMQ`](src/data_exchange/data_collector.cpp)（生成 plot_data_、data_for_reinject_、extral_data_ 等字段）  \n     - 文件：[src/data_exchange/data_collector.cpp](src/data_exchange/data_collector.cpp)  \n     - PlotData 定义：[src/data_exchange/plot_data.h](src/data_exchange/plot_data.h) (`PlotData`)\n\n2. plot_viewer 端接收、反序列化并绘图（两个线程：DataRecording 线程 + 主线程 UI 循环）：\n   - 启动点：程序入口 [tools/plot_viewer/src/main.cpp](tools/plot_viewer/src/main.cpp)（当前打开文件）。主流程：\n     - 先加载配置与车辆参数（LoadCommonConfigs / VehicleConfigHelper::Init）。\n     - 启动数据记录线程：[`tte::planning::plotviewer::DataRecording`](tools/plot_viewer/src/data_record.cpp)（线程函数）。\n     - 在主循环中通过互斥锁从 DataRecording 线程复制共享的 `plot_data` 到 `plot_viewer.plot_data_`，当 `new_data_came` 为 true 时触发绘图：[`main.cpp` 主循环](tools/plot_viewer/src/main.cpp)。\n\n3. DataRecording 线程（接收 + 存盘 + 通知主线程）：\n   - 文件/函数：[`tte::planning::plotviewer::DataRecording`](tools/plot_viewer/src/data_record.cpp) ([tools/plot_viewer/src/data_record.cpp](tools/plot_viewer/src/data_record.cpp))\n   - 步骤：\n     - 使用 [`ZmqSubcriber::RecData`](tools/plot_viewer/src/zmq_subscriber.cpp) 接收 ZMQ 字节流（字符串）。\n     - 把接收到的字节流传给 [`PlotViewer::SetPlotData`](tools/plot_viewer/src/plot_viewer.cpp) 做 Boost binary 反序列化（ia >> plot_data_）。\n     - 将反序列化后的 `plot_viewer.plot_data_` 复制到全局 `plot_data`，置标志 `new_data_came = true`（由主线程读取）。\n     - 若配置允许，则把帧数据写入 multi-frame 文件：使用 [src/common/multi_frame_file/multi_frame_file.h](src/common/multi_frame_file/multi_frame_file.h) 的 `AddFrame`（见 data_record.cpp 中 MultiFrameFile 使用）。\n     - （可选）保存 log 到文件。\n\n4. PlotViewer（绘图逻辑）：\n   - 类/文件：[`tte::planning::plotviewer::PlotViewer`](tools/plot_viewer/src/plot_viewer.h) 与实现 [tools/plot_viewer/src/plot_viewer.cpp](tools/plot_viewer/src/plot_viewer.cpp)。\n   - 关键接口：\n     - [`PlotViewer::SetPlotData`](tools/plot_viewer/src/plot_viewer.cpp) —— 从 std::stringstream 用 Boost binary_iarchive 反序列化到 `plot_data_`（PlotData）。\n     - [`PlotViewer::ParseExtralPlotData`](tools/plot_viewer/src/plot_viewer.cpp) —— 若 `plot_data_.extral_data_` 中有 protobuf（例如 `extra_plotdata::ExtraPlotData`），用 ParseFromArray 解析（见 [src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)）。\n     - [`PlotViewer::PlotAll`](tools/plot_viewer/src/plot_viewer.cpp) —— 顶层绘制控制：先尝试解析 extral plot data（若存在则走停车图序列），否则按配置绘制 XY/SL/ST/VT/VS 等 figures。\n     - 动画与细节绘制：[`PlotViewer::PlayAnimationSmoothedResult`](tools/plot_viewer/src/plot_viewer.cpp)、[`PlotViewer::PlotParkingView`](tools/plot_viewer/src/plot_viewer.cpp)、以及大量 Plot* 函数（PlotGlobalPathXY、PlotObstaclesXY、PlotOutPutTrajectoryXY、PlotKappaFigure 等）。\n   - 绘图库封装：使用 Matplot 封装类 [`MatplotApi`](tools/plot_viewer/src/matplot_api.cpp/.h)（内部调用 third_party matplotlibcpp），接口如 `Plot2D`, `PlotShow`, `Pause` 等。\n\n5. 回放（离线播放）：\n   - 回放加载单帧数据：[tools/plot_viewer/src/playback_single_frame.cpp](tools/plot_viewer/src/playback_single_frame.cpp)。函数：\n     - `PlayBackSingleFrameAndAnimation` / `PlayBackSingleFrame`：支持从 MultiFrameFile（优先）或旧版单文件（data_N）读取数据，然后调用 `plot_viewer.SetPlotData` 并 `PlotAll` 或 `PlayAnimationSmoothedResult`。\n     - 帧存在检查：`CheckIfThisFrameExist`、查找下一个/上一个可用帧等函数也在该文件。\n\n关键交互关系（简短）\n- 上游构建 PlotData -> Boost 序列化 -> ZMQ 发出  \n  (上游代码位于：[src/data_exchange/data_collector.cpp](src/data_exchange/data_collector.cpp) 与 [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp))\n- plot_viewer 的 DataRecording 通过 [`ZmqSubcriber`](tools/plot_viewer/src/zmq_subscriber.cpp) 接收 -> `PlotViewer::SetPlotData` 反序列化到 `plot_data_` -> 复制到主线程可见的 `plot_data`，触发绘图\n- 如果 `plot_data_.extral_data_` 包含 protobuf（extra_plotdata），PlotViewer 通过 protobuf API 解析并绘制停车视图（[src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)）\n\n主要相关文件和符号（可点开）\n- 程序入口 / 主循环：[tools/plot_viewer/src/main.cpp](tools/plot_viewer/src/main.cpp) (`main`) — 当前打开文件  \n- 数据记录线程：[`tte::planning::plotviewer::DataRecording`](tools/plot_viewer/src/data_record.cpp) — [tools/plot_viewer/src/data_record.cpp](tools/plot_viewer/src/data_record.cpp)  \n- ZMQ 订阅实现：[`tte::planning::plotviewer::ZmqSubcriber`](tools/plot_viewer/src/zmq_subscriber.cpp) — [tools/plot_viewer/src/zmq_subscriber.cpp](tools/plot_viewer/src/zmq_subscriber.cpp)  \n- PlotViewer 类与方法：[`tte::planning::plotviewer::PlotViewer::SetPlotData`](tools/plot_viewer/src/plot_viewer.cpp), [`tte::planning::plotviewer::PlotViewer::PlotAll`](tools/plot_viewer/src/plot_viewer.cpp), [`tte::planning::plotviewer::PlotViewer::PlayAnimationSmoothedResult`](tools/plot_viewer/src/plot_viewer.cpp) — [tools/plot_viewer/src/plot_viewer.cpp](tools/plot_viewer/src/plot_viewer.cpp) / [tools/plot_viewer/src/plot_viewer.h](tools/plot_viewer/src/plot_viewer.h)  \n- Matplot 封装：[`MatplotApi`](tools/plot_viewer/src/matplot_api.cpp) — [tools/plot_viewer/src/matplot_api.cpp](tools/plot_viewer/src/matplot_api.cpp) / [tools/plot_viewer/src/matplot_api.h](tools/plot_viewer/src/matplot_api.h)  \n- Multi-frame 存取：[src/common/multi_frame_file/multi_frame_file.h](src/common/multi_frame_file/multi_frame_file.h)（DataRecording 使用）  \n- 上游发送端（供比对）：[src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp) 与 [src/data_exchange/data_collector.cpp](src/data_exchange/data_collector.cpp)（序列化 PlotData）  \n- Protobuf 解析（extra_plotdata）：[src/proto/extra_plot_data.pb.h](src/proto/extra_plot_data.pb.h)；reinject 数据：[src/proto/data_reinjection/reinjection_data.pb.h](src/proto/data_reinjection/reinjection_data.pb.h)\n\n快速定位路径（一次性列表）  \n- [tools/plot_viewer/src/main.cpp](tools/plot_viewer/src/main.cpp)  \n- [tools/plot_viewer/src/data_record.cpp](tools/plot_viewer/src/data_record.cpp) (`DataRecording`)  \n- [tools/plot_viewer/src/zmq_subscriber.cpp](tools/plot_viewer/src/zmq_subscriber.cpp) (`ZmqSubcriber::RecData`)  \n- [tools/plot_viewer/src/plot_viewer.cpp](tools/plot_viewer/src/plot_viewer.cpp) (`PlotViewer::SetPlotData`, `PlotAll`, `PlayAnimationSmoothedResult`, 各 Plot* 函数)  \n- [tools/plot_viewer/src/matplot_api.cpp](tools/plot_viewer/src/matplot_api.cpp)（绘图封装）  \n- [tools/plot_viewer/src/playback_single_frame.cpp](tools/plot_viewer/src/playback_single_frame.cpp)（离线回放）  \n- [src/data_exchange/zmq_publisher.cpp](src/data_exchange/zmq_publisher.cpp)（上游发送）  \n- [src/data_exchange/data_collector.cpp](src/data_exchange/data_collector.cpp)（构造 PlotData，包括 `CollectDataForReinject`）  \n- [src/data_exchange/plot_data.h](src/data_exchange/plot_data.h)（PlotData 结构）  \n- [src/common/multi_frame_file/multi_frame_file.h](src/common/multi_frame_file/multi_frame_file.h)（multi-frame 存储）\n\n如何扩展 / 排错要点（简短）\n- 若上游要可视化新字段：在上游填充 `plot_data_`（或将自定义 protobuf 写入 `plot_data_.extral_data_`），确保 plot_viewer 能解析（`ParseExtralPlotData`）并在 [`PlotViewer::Plot*`] 中绘制。参考：[src/data_exchange/data_collector.cpp](src/data_exchange/data_collector.cpp) 的 `CollectParkingPlotData` 用法，以及 [`src/proto/extra_plot_data.pb.h`](src/proto/extra_plot_data.pb.h) 的消息定义。  \n- 若 plot_viewer 收不到数据：确认 ZMQ 地址/端口 与 [tools/plot_viewer/src/plot_viewer_config.h](tools/plot_viewer/src/plot_viewer_config.h) 配置一致，并检查 [`ZmqSubcriber::RecData`](tools/plot_viewer/src/zmq_subscriber.cpp) 的接收超时。  \n- 若绘图失败或 matplotlib 问题：确认 CMake 链接的 Python/Matplotlib（CMakeLists.txt 指向 python3.7m），并检查 `MatplotApi` 输出。\n\n需要我做什么下一步？（可选，选一个）\n- 给出「如何把一个 JSON → protobuf(ExtraPlotData) → 发送到 plot_viewer」的最小示例代码（上游适配器）。  \n- 给出批量把 multi-frame 文件导出成 PNG 的回放脚本（基于现有 playback 逻辑）。  \n\n请选择一个，我会把对应的示例代码或脚本贴到工作区文件中，并附上修改位置链接。",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "32450e32-9208-4bd9-a6cc-2580a4e1d843"
+            }
+          ],
+          "modelMessageId": "71b478fb-8dfb-40fd-88ab-36f1b49e860d",
+          "responseId": "215904ad-de27-4550-b78f-296efe232070",
+          "sessionId": "84c3e770-cf9c-4840-a3ec-4900c42172a6",
+          "agentId": "github.copilot.workspace"
+        },
+        "details": "GPT-5 mini • 1x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.32.4",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "询问工作区",
+        "when": "!github.copilot.interactiveSession.disabled",
+        "metadata": {
+          "sampleRequest": "如何生成此项目?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent",
+          "ask",
+          "edit"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "说明活动编辑器中代码的工作原理"
+          },
+          {
+            "name": "tests",
+            "description": "为所选代码生成单元测试",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "对所选代码中的问题提出修复建议",
+            "sampleRequest": "此代码中存在问题。重写代码以在修复 bug 时显示它。"
+          },
+          {
+            "name": "new",
+            "description": "工作区中的新文件或项目的基架代码",
+            "sampleRequest": "使用 typescript 创建 RESTful API 服务器",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "创建新 Jupyter Notebook",
+            "sampleRequest": "如何创建笔记本以从 csv 文件加载数据?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "在项目中设置测试(实验性)",
+            "sampleRequest": "将 playwright 测试添加到我的项目",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/bin_x86/plot_viewer",
+              "external": "file:///media/disk/2818/bin_x86/plot_viewer",
+              "path": "/media/disk/2818/bin_x86/plot_viewer",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 306,
+              "startColumn": 1,
+              "endLineNumber": 322,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+              "external": "file:///media/disk/2818/src/data_exchange/data_collector.cpp",
+              "path": "/media/disk/2818/src/data_exchange/data_collector.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 952,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/data_exchange/data_collector.h",
+              "external": "file:///media/disk/2818/src/data_exchange/data_collector.h",
+              "path": "/media/disk/2818/src/data_exchange/data_collector.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 20,
+              "startColumn": 1,
+              "endLineNumber": 67,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+              "external": "file:///media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+              "path": "/media/disk/2818/src/data_exchange/zmq_publisher.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 57,
+              "startColumn": 1,
+              "endLineNumber": 73,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/proto/data_reinjection/reinjection_data.pb.h",
+              "external": "file:///media/disk/2818/src/proto/data_reinjection/reinjection_data.pb.h",
+              "path": "/media/disk/2818/src/proto/data_reinjection/reinjection_data.pb.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1600,
+              "startColumn": 1,
+              "endLineNumber": 1613,
+              "endColumn": 42
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 5030,
+              "startColumn": 1,
+              "endLineNumber": 5047,
+              "endColumn": 73
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "external": "file:///media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "path": "/media/disk/2818/src/proto/extra_plot_data.pb.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 5085,
+              "startColumn": 1,
+              "endLineNumber": 5102,
+              "endColumn": 83
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/src/proto/someip_debug_data/someip_debug_data.pb.h",
+              "external": "file:///media/disk/2818/src/proto/someip_debug_data/someip_debug_data.pb.h",
+              "path": "/media/disk/2818/src/proto/someip_debug_data/someip_debug_data.pb.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1594,
+              "startColumn": 1,
+              "endLineNumber": 1615,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/third_party_x86_linux_libs/python3.7m/matplotlib_dependency/PIL/ImageShow.py",
+              "external": "file:///media/disk/2818/third_party_x86_linux_libs/python3.7m/matplotlib_dependency/PIL/ImageShow.py",
+              "path": "/media/disk/2818/third_party_x86_linux_libs/python3.7m/matplotlib_dependency/PIL/ImageShow.py",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 201,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "external": "file:///media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "path": "/media/disk/2818/tools/plot_viewer/.vscode/settings.json",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 83,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 2,
+              "startColumn": 1,
+              "endLineNumber": 24,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "path": "/media/disk/2818/tools/plot_viewer/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 26,
+              "startColumn": 1,
+              "endLineNumber": 91,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/data_record.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 168,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/main_playback_hybrid_a_star.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 302,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "external": "file:///media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "path": "/media/disk/2818/tools/plot_viewer/src/main.cpp",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/matplot_api.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 280,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/playback_single_frame.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 7,
+              "startColumn": 1,
+              "endLineNumber": 212,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+              "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer_config.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 40,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 2136,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+              "path": "/media/disk/2818/tools/plot_viewer/src/plot_viewer.h",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 174,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+              "external": "file:///media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+              "path": "/media/disk/2818/tools/plot_viewer/src/zmq_subscriber.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 8,
+              "startColumn": 1,
+              "endLineNumber": 74,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/TBA/matplot_api_TBA.cpp",
+              "external": "file:///media/disk/2818/tools/TBA/matplot_api_TBA.cpp",
+              "path": "/media/disk/2818/tools/TBA/matplot_api_TBA.cpp",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 13,
+              "startColumn": 1,
+              "endLineNumber": 261,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "external": "file:///media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "path": "/media/disk/2818/tools/vehicle_body_contour/CMakeLists.txt",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 38,
+              "startColumn": 1,
+              "endLineNumber": 51,
+              "endColumn": 1
+            }
+          },
+          "options": {
+            "isFromTool": false
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "variableName": "plot_viewer"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1762584075713,
+      "modelId": "copilot/gpt-5-mini"
+    }
+  ]
+}

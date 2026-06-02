@@ -1,0 +1,12 @@
+{
+  "viewTypes": [
+    "markdown",
+    "canvas",
+    "pdf"
+  ],
+  "showModal": true,
+  "skipPinned": true,
+  "stayInSplit": true,
+  "focusLeafOnKeyUp": true,
+  "useViewTypes": true
+}

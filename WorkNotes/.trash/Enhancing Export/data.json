@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "name": "Markdown",
+      "openExportedFileLocation": true
+    },
+    {
+      "name": "Markdown (Hugo)"
+    },
+    {
+      "name": "Html"
+    },
+    {
+      "name": "TextBundle"
+    },
+    {
+      "name": "Typst"
+    },
+    {
+      "name": "PDF"
+    },
+    {
+      "name": "Word (.docx)"
+    },
+    {
+      "name": "OpenOffice"
+    },
+    {
+      "name": "RTF"
+    },
+    {
+      "name": "Epub"
+    },
+    {
+      "name": "Latex"
+    },
+    {
+      "name": "Media Wiki"
+    },
+    {
+      "name": "reStructuredText"
+    },
+    {
+      "name": "Textile"
+    },
+    {
+      "name": "OPML"
+    },
+    {
+      "name": "Bibliography"
+    }
+  ],
+  "pandocPath": {
+    "win32": "C:\\Users\\734-202307\\AppData\\Local\\Pandoc\\pandoc.exe"
+  },
+  "defaultExportDirectoryMode": "Custom",
+  "openExportedFile": true,
+  "env": {},
+  "showExportProgressBar": true,
+  "customDefaultExportDirectory": {
+    "win32": "R:\\王晓俊\\13.ObsidianProject\\导出文件"
+  },
+  "openExportedFileLocation": true,
+  "lastExportDirectory": {
+    "win32": "R:\\王晓俊\\2.工作内容\\3.融合泊车决策规控Gen2"
+  },
+  "lastExportType": "Word (.docx)",
+  "showOverwriteConfirmation": true
+}

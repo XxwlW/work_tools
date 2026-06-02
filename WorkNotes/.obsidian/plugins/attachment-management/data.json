@@ -1,0 +1,27 @@
+{
+  "attachPath": {
+    "attachmentRoot": ".images/assets/",
+    "saveAttE": "inFolderBelow",
+    "attachmentPath": "${notename}.assets",
+    "attachFormat": "${originalname}",
+    "type": "GLOBAL"
+  },
+  "dateFormat": "YYYYMMDDHHmmssSSS",
+  "excludeExtensionPattern": "",
+  "autoRenameAttachment": true,
+  "excludedPaths": "",
+  "excludePathsArray": [],
+  "excludeSubpaths": false,
+  "originalNameStorage": [
+    {
+      "n": "{{YYYYMMDDHHmmssSSS}}",
+      "md5": "AE19DA174C72091D9E400F2B289D2DF2"
+    },
+    {
+      "n": "Pasted image 20250817224646",
+      "md5": "3BCD5208F362D24BD195A94A165DA6E6"
+    }
+  ],
+  "overridePath": {},
+  "disableNotification": false
+}

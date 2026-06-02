@@ -1,0 +1,238 @@
+{
+  "main": {
+    "id": "052aae56719c8b75",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b58dad1d813c2b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd978d9037420d01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "聚合/钱包集合.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "钱包集合"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db3bc1d410854424",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "be8dfdf78b741c09",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "标签"
+        }
+      },
+      {
+        "id": "8e7b91c4284d2817",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "书签"
+        }
+      },
+      {
+        "id": "e68d182dc204c5b0",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {},
+          "icon": "clock",
+          "title": "Recent Files"
+        }
+      },
+      {
+        "id": "65b9744ac0c3eafa",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "文件列表"
+        }
+      },
+      {
+        "id": "0351b1f80012db84",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "anti",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "搜索"
+        }
+      }
+    ],
+    "currentTab": 3
+  },
+  "right": {
+    "id": "c148a06847030589",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "34edda7b5f7863c9",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "01 日记/2026-02-04 周三.md",
+            "collapseAll": true,
+            "extraContext": true,
+            "sortOrder": "alphabetical",
+            "showSearch": true,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "反向链接"
+        }
+      },
+      {
+        "id": "f092cad0093610fc",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "a0644ec906e4e5bc",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "财务分析仪表盘.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "大纲"
+        }
+      },
+      {
+        "id": "898f45866412fdeb",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {},
+          "icon": "calendar-with-checkmark",
+          "title": "Calendar"
+        }
+      }
+    ],
+    "currentTab": 3
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "cmdr:关系图谱: 打开局部关系图": false,
+      "canvas:新建白板": false,
+      "bases:新建数据库": false,
+      "cmdr:Templater: Create new note from template": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "quickadd:QuickAdd": false,
+      "remotely-save:Remotely Save": false
+    }
+  },
+  "active": "dd978d9037420d01",
+  "lastOpenFiles": [
+    "聚合/财务分析仪表盘.md",
+    "聚合/财务分析.md",
+    "01 日记/2026-04-28 周二.md",
+    "01 日记/2026-04-27 周一.md",
+    "01 日记/2026-04-26 周日.md",
+    "02 事件/022 事/Gemini ultra 月订阅-0313.md",
+    "01 日记/2026-04-25 周六.md",
+    "01 日记/2026-04-24 周五.md",
+    "03 人物/钱包/京东.md",
+    "01 日记/2026-04-23 周四.md",
+    "02 事件/022 事/构想-4316.md",
+    "04 项目/劳务系统.md",
+    "01 日记/2026-04-22 周三.md",
+    "01 日记/2026-04-21 周二.md",
+    "01 日记/2026-04-20 周一.md",
+    "01 日记/2026-04-19 周日.md",
+    "01 日记/2026-04-18 周六.md",
+    "01 日记/2026-04-13 周一.md",
+    "01 日记/2026-04-14 周二.md",
+    "01 日记/2026-04-15 周三.md",
+    "01 日记/2026-04-16 周四.md",
+    "01 日记/2026-04-17 周五.md",
+    "03 人物/人/蔡朋.md",
+    "01 日记/2026-04-12 周日.md",
+    "01 日记/2026-04-05 周日.md",
+    "03 人物/钱包/支付宝0991.md",
+    "-1 附件/Pasted image 20260418213331.png",
+    "-1 附件/Pasted image 20260418214029.png",
+    "-1 附件/Pasted image 20260418214003.png",
+    "-1 附件/Pasted image 20260418214109.png",
+    "-1 附件/Pasted image 20260418213207.png",
+    "-1 附件/Pasted image 20260418213503.png",
+    "-1 附件/Pasted image 20260418213742.png",
+    "-1 附件/Pasted image 20260418213454.png",
+    "-1 附件/Pasted image 20260418213505.png",
+    "-1 附件/Pasted image 20260418213049.png",
+    "-1 附件/1000090714.mp4",
+    "-1 附件/1000090717.mp4",
+    "-1 附件/1000090558.mp4",
+    "未命名 3.base",
+    "-1 附件/download.mp4",
+    "-1 附件/PinyinInput.mp4",
+    "Untitled.canvas",
+    "未命名.canvas",
+    "未命名 2.canvas",
+    "未命名 3.canvas",
+    "未命名 1.canvas",
+    "财务.canvas",
+    "聚合0323.zip",
+    "聚合.zip",
+    "11 scripts/Views.zip",
+    "11 scripts/0321-1611.rar",
+    "panel.canvas"
+  ]
+}

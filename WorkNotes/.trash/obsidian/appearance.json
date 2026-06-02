@@ -1,0 +1,12 @@
+{
+  "accentColor": "",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "page-width",
+    "hieght"
+  ],
+  "cssTheme": "Moonlight",
+  "baseFontSize": 17,
+  "translucency": false,
+  "nativeMenus": true
+}

@@ -1,0 +1,21 @@
+{
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": false,
+  "useMarkdownLinks": true,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "1",
+    "downscalePercent": 100
+  },
+  "attachmentFolderPath": "assets",
+  "showLineNumber": true,
+  "spellcheck": true,
+  "trashOption": "local",
+  "readableLineLength": false,
+  "autoConvertHtml": false
+}

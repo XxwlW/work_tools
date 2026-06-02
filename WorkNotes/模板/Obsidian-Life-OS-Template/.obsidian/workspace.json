@@ -1,0 +1,296 @@
+{
+  "main": {
+    "id": "41ee8b27cc1916b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c2b1fc28c0d3e17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9588d97941930fde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "聚合/生活成本.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "生活成本"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0d0c4a803a9c0f75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d3cf3893cc2ee1a",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "聚合/生活成本.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "生活成本 的关系图"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4d2a517993e04ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "832605645199e27a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06eae3ea590e51b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "37775b0474afb1ea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#项目",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "54699cf7913e6847",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "e8dd1b94f35a7abf",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "e2bf246812b20b17",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "recent-files"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 225.5
+  },
+  "right": {
+    "id": "d3da74a59991c19e",
+    "type": "split",
+    "children": [
+      {
+        "id": "364544c0c51ec5c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ab9e07faac6a004",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01 日记/2026-01-27 周二.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-01-27 周二 的反向链接列表"
+            }
+          },
+          {
+            "id": "6bccc204914149d3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "钱包集合.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "钱包集合 的出链列表"
+            }
+          },
+          {
+            "id": "9dab97e2778be750",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4698d3e95ad13659",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "钱包集合.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "钱包集合 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:查看关系图谱": false,
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "quickadd:QuickAdd": false,
+      "cmdr:Templater: Create new note from template": false,
+      "cmdr:关系图谱: 打开局部关系图": false,
+      "cmdr:QuickAdd: Run QuickAdd": false
+    }
+  },
+  "active": "9588d97941930fde",
+  "lastOpenFiles": [
+    "聚合/人物罗盘.md",
+    "聚合/钱包集合.md",
+    "聚合/财务分析.md",
+    "聚合/项目罗盘.md",
+    "04 项目/项目A.md",
+    "ai优化下的自己写的教程/01_从日记开始.md",
+    "00附件/Pasted image 20260509122440.png",
+    "01 日记/2026-05-10 周日.md",
+    "01 日记/2026-05-08 周五.md",
+    "03 人物/人/小明.md",
+    "03 人物/人/小刘.md",
+    "02 事件/021 账本/买菜结构化写法.md",
+    "02 事件/022 事/项目A启动.md",
+    "02 事件/022 事/买菜结构化的等价写法-3002.md",
+    "02 事件/022 事/51旅行记-4852.md",
+    "聚合/生活成本.md",
+    "ai优化下的自己写的教程/README.md",
+    "03 人物/钱包/样例工资卡.md",
+    "自己写的教程/6泛化.md",
+    "自己写的教程/2书写事情.md",
+    "01 日记/2026-05-07 周四.md",
+    "01 日记/2026-05-06 模板示例.md",
+    "03 人物/钱包/样例信用卡.md",
+    "自己写的教程/7记账的约定.md",
+    "自己写的教程/5关键字.md",
+    "自己写的教程/4写法.md",
+    "Template-Release/Obsidian-Life-OS-Template/Obsidian-Life-OS-Template/自己写的教程",
+    "Template-Release/Obsidian-Life-OS-Template/__rar_15740.6787.rartemp",
+    "Template-Release/Obsidian-Life-OS-Template/Obsidian-Life-OS-Template/11 scripts/Views/ObjectProfile.js",
+    "Template-Release/Obsidian-Life-OS-Template/Obsidian-Life-OS-Template/11 scripts/Core/ViewQuery.js",
+    "verify-template-release.ps1",
+    "11 scripts/Core/ViewQuery.js",
+    "11 scripts/n.png",
+    "refactor-wallet.js",
+    "refactor-person.js",
+    "refactor-css.js",
+    "refactor-viewkit.js",
+    "reports/responsive-audit/probe_person_compass_900_after_esc.png",
+    "reports/responsive-audit/probe_person_compass_390_after_sidebar_toggle.png",
+    "reports/responsive-audit/probe_person_compass_390.png",
+    "reports/responsive-audit/probe_printwindow_flag3.png",
+    "reports/responsive-audit/probe_printwindow_flag2.png",
+    "reports/responsive-audit/probe_printwindow_flag0.png",
+    "reports/responsive-audit/probe_wallet_900.png",
+    "反馈/单钱包全页.png",
+    "Untitled.canvas",
+    "财务.canvas",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "未命名 2.canvas",
+    "未命名 3.canvas",
+    "panel.canvas"
+  ]
+}

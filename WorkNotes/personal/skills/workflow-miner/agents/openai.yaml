@@ -1,0 +1,7 @@
+interface:
+  display_name: "Workflow Miner"
+  short_description: "Find reusable workflows in past work"
+  default_prompt: "Use $workflow-miner to review my provided task history and suggest which repeated workflows should become prompts, skills, agents, or automations."
+
+policy:
+  allow_implicit_invocation: true

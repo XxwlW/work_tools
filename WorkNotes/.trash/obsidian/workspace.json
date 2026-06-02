@@ -1,0 +1,325 @@
+{
+  "main": {
+    "id": "69555a0cd84807d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "4dc00c24481cbeca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6c5db17dda3abb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "planning_obsdian/Planning基础结构及调用.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Planning基础结构及调用"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c0606acc0bacfff9",
+    "type": "split",
+    "children": [
+      {
+        "id": "f67b71cd5168e8ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d46036a7f9de20ad",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "c77a59fa41107b80",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "file",
+                "matchingCase": true,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d3b3be90d674d335",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "clock",
+              "title": "Chronology"
+            }
+          },
+          {
+            "id": "2e39ebeab735205c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "a428b4280b575237",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 364.5
+  },
+  "right": {
+    "id": "525344d0ed2dd543",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca45d108b55c723c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9db7ddb8da979bf0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Planning基础结构及调用.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Planning基础结构及调用 的大纲"
+            }
+          },
+          {
+            "id": "3ba65fb73ed29264",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Planning基础结构及调用.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Planning基础结构及调用 的反向链接列表"
+            }
+          },
+          {
+            "id": "a6fac228c484229d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Planning基础结构及调用.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Planning基础结构及调用 的出链列表"
+            }
+          },
+          {
+            "id": "36ef2588f5a0da82",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "chronology-calendar-view"
+            }
+          },
+          {
+            "id": "a8f1c19ff9c9f144",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "chronology-calendar-view"
+            }
+          },
+          {
+            "id": "375a2732596a62ef",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "chronology-calendar-view"
+            }
+          },
+          {
+            "id": "56c75978a227488c",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "chronology-calendar-view"
+            }
+          },
+          {
+            "id": "0350119f7e71eb3f",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "clock",
+              "title": "Chronology"
+            }
+          },
+          {
+            "id": "ce25a39e6b0c9d21",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ],
+        "currentTab": 8
+      },
+      {
+        "id": "57c0ddf0b4d13879",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a2363ad416b7c19",
+            "type": "leaf",
+            "state": {
+              "type": "ob_comments",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Comments"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 282.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-comments:Show Comments Panel": false,
+      "edit-history:Open edit history": false,
+      "vscode-editor:新建代码文件": false,
+      "sheet-plus:创建 Excel 文件": false,
+      "excel:创建 Excel 文件": false,
+      "obsidian-memos:Thino": false,
+      "remotely-save:Remotely Save": false,
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "workspaces:管理工作区布局": false,
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "chronology:Open Chronology": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
+    }
+  },
+  "active": "d46036a7f9de20ad",
+  "lastOpenFiles": [
+    "Ubuntu常用/git指令.md",
+    "工时/1月工作记录.md.edtz",
+    "工时/1月工作记录.md",
+    "工时/1月工作记录.txt.edtz",
+    "工时/1月工作记录.txt",
+    "工时/待办.md.edtz",
+    "Ubuntu常用/常用命令.md.edtz",
+    "融合泊车决策规控Gen2.0_斜列完全泊出轨迹行驶区域planning仿真_V1.0_20251023.pdf",
+    "融合泊车决策规控Gen2.0_P01,B07,M82,B06等车型ALM planning 关键问题数据分析_V1.0_20250913.pdf",
+    "planning_obsdian/后轮转向.md.edtz",
+    "planning_obsdian/后轮转向.md",
+    "planning_obsdian/智驾ADAS对后轮转向开发需求文档_V2.0_20250529.pdf",
+    "planning_obsdian/hybrid_astar.md.edtz",
+    "planning_obsdian/hybrid_astar.md",
+    "planning_obsdian/Planning基础结构及调用.md",
+    "images/12月工作记录.assets/image-20251217102210701.png",
+    "images/IMU.assets/image-20251215175612580.png",
+    "images/IMU.assets/image-20251215174746446.png",
+    "images/IMU.assets/image-20251215174629338.png",
+    "images/IMU.assets/image-20251215174237880.png",
+    "images/IMU.assets/image-20251215174209471.png",
+    "images/IMU.assets/image-20251212173017314.png",
+    "images/IMU.assets/image-20251212172921259.png",
+    "images/IMU.assets/image-20251212171812906.png",
+    "images/IMU.assets/image-20251212171020558.png",
+    "Planning log 查看.md",
+    "Planning基础结构及调用.md",
+    "open_space_roi_decider.md",
+    "Untitled.md",
+    "1.md",
+    "未命名.md",
+    "3.Planning/Planning log 查看.md",
+    "3.Planning/ROI Decider.md",
+    "3.Planning/open_space_trajectory_optimizer_en.md",
+    "3.Planning/Planning基础结构及调用.md",
+    "1.车位校正/超声波校正数据流程.md",
+    "4.Git编译封装/TDA4VL 软件编译&封库.md",
+    "1.车位校正/分析.md",
+    "0611 分析.md",
+    "1.车位校正/2.车头/车头入库上位机仿真问题.md",
+    "4.Git编译封装/Linux.md",
+    "5.QAC/QAC相关.md",
+    "images/Pasted image 20250110101904.png.md",
+    "images/Pasted image 20250515140448.png.md",
+    "1.车位校正/Notes.md",
+    "1.车位校正/调试记录（ALM 尚未挂的问题/P01.md",
+    "未命名.canvas",
+    "白板/未命名.canvas",
+    "Whiteboard/未命名.canvas",
+    "whiteboard/未命名.canvas"
+  ]
+}

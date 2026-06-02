@@ -1,0 +1,59 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "templater-obsidian:create-new-note-from-template",
+      "icon": "lucide-apple",
+      "name": "Templater: Create new note from template",
+      "mode": "any"
+    },
+    {
+      "id": "graph:open-local",
+      "icon": "lucide-git-fork",
+      "name": "关系图谱: 打开局部关系图",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:runQuickAdd",
+      "icon": "lucide-airplay",
+      "name": "QuickAdd: Run QuickAdd",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "Shell commands: Custom variables",
+      "QuickAdd",
+      "Templater",
+      "打开命令面板",
+      "插入模板",
+      "打开快速切换",
+      "新建数据库",
+      "新建白板",
+      "查看关系图谱",
+      "新建绘图文件"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

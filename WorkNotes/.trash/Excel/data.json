@@ -1,0 +1,12 @@
+{
+  "folder": "/Excel",
+  "excelFilenamePrefix": "Excel ",
+  "excelFilenameDateTime": "YYYY-MM-DD HH.mm.ss",
+  "sheetHeight": "700",
+  "rowHeight": "25",
+  "colWidth": "100",
+  "theme": "light",
+  "showSheetButton": "false",
+  "defaultRowsLen": "100",
+  "defaultColsLen": "26"
+}
