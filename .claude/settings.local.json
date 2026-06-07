@@ -10,7 +10,14 @@
       "Bash(python3 -c \"import akshare as ak; df = ak.spot_golden_benchmark_sge\\(\\); print\\(df.columns.tolist\\(\\)\\); print\\(df\\)\")",
       "Bash(robocopy \"C:/Users/Wang/.claude/\" \"D:/ClaudeConfig/\" /MIR /R:2 /W:2 /NFL /NDL /NP)",
       "Bash(echo \"---exit=$?---\")",
-      "Bash(cmd //c \"robocopy \\\\\"C:\\\\\\\\Users\\\\\\\\Wang\\\\\\\\.claude\\\\\\\\\\\\\" \\\\\"D:\\\\\\\\ClaudeConfig\\\\\\\\\\\\\" /MIR /R:2 /W:2 /NFL /NDL /NP\")"
+      "Bash(cmd //c \"robocopy \\\\\"C:\\\\\\\\Users\\\\\\\\Wang\\\\\\\\.claude\\\\\\\\\\\\\" \\\\\"D:\\\\\\\\ClaudeConfig\\\\\\\\\\\\\" /MIR /R:2 /W:2 /NFL /NDL /NP\")",
+      "Bash(unzip -l claude-skills-export-20260607.zip)",
+      "Read(//tmp/**)",
+      "Bash(unzip -o /media/disk1/my_project/skills/claude-skills-export-20260607.zip)",
+      "Bash(cp -r /tmp/global-skills/* ~/.claude/skills/)",
+      "Bash(cp -r /tmp/guizang-social-card-skill ~/.claude/skills/)",
+      "Bash(cp *)",
+      "Bash(uv pip *)"
     ]
   }
 }
