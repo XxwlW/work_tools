@@ -1,0 +1,6 @@
+- [知识猫 x AI测评日记 账号画像](xiaohongshu-account-profile.md) — AI工具/Agent科普账号；TOP5爆款公式=数字党+AI工具属性+对比表
+- [小红书笔记生成标准流程 v4](xiaohongshu-content-workflow.md) — 6步流程=数据核验→笔记→6张Prompt→中文校对→出图指南；v4极简封面规范
+- [知识猫 选题池](xiaohongshu-topic-pool.md) — 5大行业×15个AI影响行业选题 + 跨行业爆款选题（70%普及/23%失业/78%代码）
+- [xhs 项目目录结构](xhs-project-structure.md) — 数据/、内容/day1-15/、建议/ 三大子目录
+- [教程类内容要有实操数据支撑](no-tutorial-without-data.md) — 账号未跑通时避写"教程/教你/0 成本/7 天"类承诺型笔记
+- [笔记只做观点分享不做工作/机会推荐](only-opinion-sharing.md) — 避写"5 个新机会/月入/副业/职业"等推荐型内容
