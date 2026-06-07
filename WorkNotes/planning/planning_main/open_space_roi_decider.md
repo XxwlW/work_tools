@@ -12,7 +12,7 @@
 
 Vec2d::SelfRotate 坐标系旋转函数
 
-![image-20251230130413093](./images/open_space_roi_decider.assets/image-20251230130413093.png)
+![image-20251230130413093](../../images/assets/open_space_roi_decider.assets/image-20251230130413093.png)
 
 ## bool OpenSpaceRoiDecider::SetParkingSpotEndPose
 
@@ -24,11 +24,11 @@ frame->planning_start_point_为世界坐标系下的起点位置
 open_space_info.open_space_end_pose()　为车身坐标系
 
 M 坐标系：（世界坐标系）
-![](./images//open_space_roi_decider.assets/20250527-1.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-1.png)
 
 
 N 坐标系：（车身坐标系）
-![](./images//open_space_roi_decider.assets/20250527-2.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-2.png)
 
 ```
 OpenspaceUtils::PathPointNormalizing(xxxxx)` 函数 对坐标系进行转换 M -> N
@@ -36,23 +36,23 @@ OpenspaceUtils::PathPointNormalizing(xxxxx)` 函数 对坐标系进行转换 M -
 OpenspaceUtils:: `PathPointDeNormalizing`() 对坐标系进行转换 N-> M
 ```
 
-![](./images//open_space_roi_decider.assets/20250527-3.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-3.png)
 
 `OpenSpaceRoiDecider::GetParkingBoundary()`:
 RightTop、RightDown、LeftDown、LeftTop 如下：（世界坐标系下） 对应如下
 
-![](./images//open_space_roi_decider.assets/20250527-4.png)
-![](./images//open_space_roi_decider.assets/20250527-5.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-4.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-5.png)
 
 OriginPoint 为 LeftTop
 
 如下图，紫色为 M 坐标系下的车位，橙线为 N 坐标系下的车位
-![](./images//open_space_roi_decider.assets/20250527-6.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-6.png)
 
 
 传入数据：
 世界坐标系下：
-![](./images//open_space_roi_decider.assets/20250527-8.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-8.png)
 
 ROI、Boundary 如上
 
@@ -71,4 +71,4 @@ ROI、Boundary 如上
 ### 将 Boundary 转为车身坐标系（N 坐标系）：
 
 后如下图：
-![](./images//open_space_roi_decider.assets/20250527-9.png)
+![](../../images/assets/open_space_roi_decider.assets/20250527-9.png)

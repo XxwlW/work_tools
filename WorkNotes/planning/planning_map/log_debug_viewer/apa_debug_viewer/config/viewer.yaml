@@ -1,0 +1,65 @@
+# APA Debug Viewer 配置文件
+
+viewer:
+  title: "APA Debug Viewer"
+  width: 1200
+  height: 800
+
+renderer:
+  default_line_width: 2.0
+  boundary_line_width: 3.0
+  marker_size: 4
+  point_opacity: 1.0
+
+vehicle:
+  length: 4.8    # meter
+  width: 1.9     # meter
+
+parser:
+  mm_to_m: true
+  frame_end_marker: "Current frame end."
+
+layers:
+  CurrentVehicle:
+    visible: true
+    description: "当前车辆位置"
+  GoalVehicle:
+    visible: true
+    description: "目标车辆位置"
+  Slot:
+    visible: true
+    description: "停车位"
+  LeftPDC:
+    visible: true
+    description: "左侧 PDC 原始点"
+  RightPDC:
+    visible: true
+    description: "右侧 PDC 原始点"
+  BSeg:
+    visible: true
+    description: "原始边界点 (Base Segment)"
+  NSeg:
+    visible: true
+    description: "新增边界点 (New Segment)"
+  FusSeg:
+    visible: true
+    description: "融合结果 (Fusion Segment)"
+  Boundary:
+    visible: true
+    description: "主边界 (Main Boundary)"
+  SubBoundary:
+    visible: true
+    description: "对向边界 (Sub Boundary)"
+
+colors:
+  BSeg: "#1f77b4"
+  NSeg: "#ff7f0e"
+  FusSeg: "#d62728"
+  Boundary: "#000000"
+  SubBoundary: "#888888"
+  Slot: "#2ca02c"
+  LeftPDC: "#17becf"
+  RightPDC: "#e377c2"
+  CurrentVehicle: "#1f77b4"
+  GoalVehicle: "#2ca02c"
+  Path: "#bcbd22"

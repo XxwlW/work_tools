@@ -61,6 +61,30 @@ bUpdataCalBoundaryFlag 车辆是否在车位内 True为在车位内
 APAMap_ParkingOutCalBoundaryByParkOutInfo 锚点转换后重置主边界，转换前两个边界都会重置
 ```
 
+
+### 左右边界定义
+ `ParkSide == APA_CAR_PARK_AT_RIGHT_SIDE` 在水平泊出时竟然被赋值给了 `LeftBoundary`（逻辑完全反相），并且距离阈值也截然不同
+水平泊出（侧方停车）的赋值逻辑之所以和垂直/斜列泊出“格格不入”，是因为底层隐藏着两个核心的物理与几何学原因：
+为什么左右边界的赋值完全“反相”？
+这是由于**车身停放姿态相差了 90 度**，导致局部标系下的“左右拓扑关系”发生了空间折叠。
+用第一人称视角（司机坐在车里）推演一下：
+
+**🚗 场景 A：垂直泊出（倒车入库）**
+
+* **假设**：你的车位在马路的**左侧 (`LEFT_SIDE`)**。
+* **姿态**：你停在车位里，车头垂直正对着马路。
+* **感知识别**：此时，你左手边停着一辆车，右手边停着一辆车。车位的左边界就在你的**左侧**。
+* **代码映射**：非常符合人类直觉。`ParkSide == LEFT` $\rightarrow$ `MainSlotBord = LeftBoundary`。
+
+**🚙 场景 B：水平泊出（侧方停车）**
+
+* **假设**：你的车位在马路的**右侧 (`RIGHT_SIDE`)**。
+* **姿态**：你停在车位里，车头**平行**于马路（顺着车道线方向）。
+* **感知识别**：此时，你的右手边是马路牙子（Curb），而**开放的马路和你的车位出口，其实在你的左手边**！前车 (Obj1) 和后车 (Obj2) 的防撞角点，也是分布在车身的**左前方和左后方**。
+* **代码映射**：因为出口和障碍物都在左边，雷达和视觉传感器扫描到的车位边界数据，都被存进了局部坐标系的 `LeftBoundary` 数组中。
+* **结论**：这就是为什么代码里会出现反直觉的 `ParkSide == RIGHT` $\rightarrow$ `MainSlotBord = LeftBoundary`！
+
+
 # 流程
 建立坐标系成功后 坐标原点为(0, 0)
 
@@ -99,7 +123,7 @@ Data1Index / Data2Index：指示这两个相邻车位与自车的相对空间拓
 Label：需要构造的目标车位类型（如 Obj_Label_Angled_Slot 斜列车位、Obj_Label_Ladder_Slot 阶梯车位、Obj_Label_Perpen_Slot 垂直车位等）。
 ```
 利用相邻车位 构造自车位
-![](../../../assets/Pasted%20image%2020260403173940.png)
+![](../../../images/assets/open_space_roi_decider.assets/Pasted%20image%2020260403173940.png)
 
 
 ##### APAMap_ParkingOutBuildCurCarPosSlotByOneSideNearbySlot
@@ -119,7 +143,7 @@ Label：需要构造的目标车位类型（如 Obj_Label_Angled_Slot 斜列车�
 
 # 可以优化的地方
 1.APAMap_ParkingOutGetSlotInfoFromVPLSlotPts 中点顺序修改 2处相同的代码
-![](../../../assets/Pasted%20image%2020260409162032.png)
+![](../../../images/assets/open_space_roi_decider.assets/Pasted%20image%2020260409162032.png)
 
 2.endpos 更新优化一下
 WI-10062 - 合并分支-EC24厦门-完全泊出-27.05131520 左方柱角点右车 极小车位2.46米 对向车5.4米 8步泊入 后视镜越过角点方柱才折叠 左前泊出第1趟对向无边界，第2趟对向态车经过泊车退出 NG

@@ -97,7 +97,7 @@ Planning log 查看
 Planning 基础结构及调用
 
 src/data_exchange/someip/planning_data_interface.h
-![](planning/planning_main/images/planning_obsdian.assets/20250612-3.png)
+![](../../images/assets/planning_obsdian.assets/20250612-3.png)
 
 
 # Palnning 由三个组织层次：Scenario、Stage、Task
@@ -107,13 +107,13 @@ src/data_exchange/someip/planning_data_interface.h
 ## Task
 
 目录：./src/tasks/
-![](planning/planning_main/images/planning_obsdian.assets/20250515.png)
+![](../../images/assets/planning_obsdian.assets/20250515.png)
 
 task 目录下为不同的 task
 
 ### Task 类
 
-**![](planning/planning_main/images/planning_obsdian.assets/20250515-4.png)**
+**![](../../images/assets/planning_obsdian.assets/20250515-4.png)**
 Task 作为 Decider 的基类，成员函数只有 `Execute()`
 各个决策器 Decider 继承 Task，分别实现各自的 Process()
  Decider 有：OpenSpaceFallbackDecider、OpenSpaceRoiDecider、PathAssessmentDecider...等
@@ -134,7 +134,7 @@ Task 作为 Decider 的基类，成员函数只有 `Execute()`
 ![](../images/Planning基础结构及调用.assets/20250519-9.png)
 
 目录: ./src/scenarios/stage.h  stage.cpp
-![](planning/planning_main/images/planning_obsdian.assets/20250519-2.png)
+![](../../images/assets/planning_obsdian.assets/20250519-2.png)
 
 主要函数
 `virtual StageStatus Process(const TrajectoryPoint& planning_init_point, Frame* frame) = 0;`
@@ -142,12 +142,12 @@ Task 作为 Decider 的基类，成员函数只有 `Execute()`
 每个场景对应 Stage 配置 在对应的 xxxproto.txt 文件 `stage_type`
 如：`scenarios/park/valet_parking` 为例子：
  配置文件路径： modules\planning\conf\scenario\valet_parking_config.pb.txt
- ![](planning/planning_main/images/planning_obsdian.assets/20250519-1.png)
+ ![](../../images/assets/planning_obsdian.assets/20250519-1.png)
  该场景有两个 stage: `VALET_PARKING_APPROACHING_PARKING_SPOT`  `VALET_PARKING_PARKING`
  两个 stage 均继承与 Stage 类
- ![](planning/planning_main/images/planning_obsdian.assets/20250519-5.png)
+ ![](../../images/assets/planning_obsdian.assets/20250519-5.png)
  stage_parking.h 定义 stage VALET_PARKING_PARKING
- ![](planning/planning_main/images/planning_obsdian.assets/20250519-6.png)
+ ![](../../images/assets/planning_obsdian.assets/20250519-6.png)
  VALET_PARKING_APPROACHING_PARKING_SPOT 相同，各类实现各自的 `Process`
   `StageParking.Process()` 调用 `ExecuteTaskOnOpenSpace()` (`bool plan_ok = ExecuteTaskOnOpenSpace(frame);`)
   `StageApproachingParkingSpot.Process()` 调用 `ExecuteTaskOnReferenceLine()` (`bool plan_ok = ExecuteTaskOnReferenceLine(planning_init_point, frame);`)
@@ -176,11 +176,11 @@ for (auto* task : task_list_) {
 
 	![](planning_obsdian.assets/20250519-8.png)
 目录：./src/scenarios/
-![](planning/planning_main/images/planning_obsdian.assets/20250515-1.png)
+![](../../images/assets/planning_obsdian.assets/20250515-1.png)
 ​scenarios 文件夹中包含了多种场景，内部的每个文件夹就是一个 scenario 的定义和解决
 scenarios 通过调用 Stage:: Process()来处理该 stage 所包含的 task，当该 stage 处理完成时，就切换到下一个 stage。只要当前的 stage 不是空、有意义，scenario 就是“未完成”的状态，从而可以继续执行接下来的 Stage。当前的 stage 是空，则所有的 stage 处理完成了，scenario 才处理完毕
 流程图如下：
-![](planning/planning_main/images/planning_obsdian.assets/20250519-7.png)
+![](../../images/assets/planning_obsdian.assets/20250519-7.png)
 
 
 
@@ -192,14 +192,14 @@ apollo/modules/planning/planner/planner.h 文件中，定义了 2 个类：Plann
  planner 类是所有规划器的基类，重要函数有 Init() 和 Plan()
  PlannerWithReferenceLine 类 也是继承自 Planner 类，重要函数有 PlanOnReferenceLine()
 
-![](planning/planning_main/images/planning_obsdian.assets/20250616-1.png)
+![](../../images/assets/planning_obsdian.assets/20250616-1.png)
 planning 模块有 4 种规划器如下：RTKReplayPlanner，PublicRoadPlanner，NaviPlanner，LatticePlanner。每个规划器针对不同的场景和问题
 在这 4 个规划器中，都实现了继承自 Planner 类的 Plan()函数和继承自 PlannerWithReferenceLine 类的 PlanOnReferenceLine()函数。
 在执行具体的规划任务时，都是在 Plan()中调用 PlanOnReferenceLine()，从而获得规划的轨迹结果。**最底层的规划方法，是在各规划器的 `PlanOnReferenceLine()`** 中实现
 
-![](planning/planning_main/images/planning_obsdian.assets/20250519-10.png)
+![](../../images/assets/planning_obsdian.assets/20250519-10.png)
 
-![](planning/planning_main/images/planning_obsdian.assets/20250519-11.png)
+![](../../images/assets/planning_obsdian.assets/20250519-11.png)
 
 ## PlannerDispatcher
 
@@ -213,7 +213,7 @@ apollo\modules\planning\planning_base.h
 
 PlanningBase 类用来描述规划的执行过程，这样就可以把通用的规划过程（planning）和具体的规划算法（planner）解耦，具有非常强的鲁棒性
 
-![](planning/planning_main/images/planning_obsdian.assets/20250519-12.png)
+![](../../images/assets/planning_obsdian.assets/20250519-12.png)
 
 
 ## PlanningComponent
@@ -226,10 +226,10 @@ NaviPlanning - （相对地图规划器）
 
 apollo\modules\planning\planning_component.h 文件中定义了 PlanningComponent 类，该类包含一个 PlanningBase 类型的 unique_ptr 成员变量
 
-![](planning/planning_main/images/planning_obsdian.assets/20250519-13.png)
+![](../../images/assets/planning_obsdian.assets/20250519-13.png)
 在 PlanningComponent:: Proc()中，调用了 PlanningBase 类的 RunOnce 函数。根据继承与虚函数的多态特性，相对应的 planning 流程和 planner 会执行具体的规划任务。
 
-![](planning/planning_main/images/planning_obsdian.assets/20250519-14.png)
+![](../../images/assets/planning_obsdian.assets/20250519-14.png)
 
 
 # planning 数据回灌及调试
@@ -247,7 +247,7 @@ apollo\modules\planning\planning_component.h 文件中定义了 PlanningComponen
 6. 回注用 `plotviewer_local.sh` 进行可视化
 7. 调试回注功能时，需要将 `launch.json` 中 `data_reinject` GDB 的参数手动修改 添加回注 `帧数`
 **!!!!  数据转换时 障碍物类型要改... 为对应的 1~7**  
-![](planning/planning_main/images/planning_obsdian.assets/20250725.png)
+![](../../images/assets/planning_obsdian.assets/20250725.png)
 
 ### 调试
 
@@ -299,14 +299,14 @@ apollo\modules\planning\planning_component.h 文件中定义了 PlanningComponen
 
 计算对向距离
 计算 lefttop 和 righttop 两个车位角点到 对向 boundary Pt 每两个相邻点构成的 line （车位在左侧 对向为 right_boundary）的距离，最小值为车位到对向的距离
-![](planning/planning_main/images/planning_obsdian.assets/20250528-1.png)
-![](planning/planning_main/images/planning_obsdian.assets/20250528-2.png)
+![](../../images/assets/planning_obsdian.assets/20250528-1.png)
+![](../../images/assets/planning_obsdian.assets/20250528-2.png)
 
 
 ## CalSlotEntranceToAroundObsDis()
 
 计算障碍物到入口两侧边界线的最小距离
-![](planning/planning_main/images/planning_obsdian.assets/20250709.png)
+![](../../images/assets/planning_obsdian.assets/20250709.png)
 
 只计算阈值范围内的障碍物到边界线的距离，范围外的不考虑
 如上图：ABCD 点构成的障碍物不考虑
@@ -368,7 +368,7 @@ MNLG 为 startpos box
 橙色 box 为 end_box_half（膨胀后的 `LateralExtend(0.8)`） 用于与障碍物遍历每个 Obs 的相邻两个点 构成的 line_seg 线判断 进行碰撞检测( `HasOverlap()`)  ==> 主要用于进行检查 EndPos 是否贴近障碍物
 如果贴近 则 用 小栅格 mini_grid_search 进行搜索规划
 
-![](planning/planning_main/images/planning_obsdian.assets/20250528.png)
+![](../../images/assets/planning_obsdian.assets/20250528.png)
 
 
 
@@ -381,7 +381,7 @@ MNLG 为 startpos box
 
 #### AdjuctObstaclesVerticesUsingAdaptingHybridSafeDis
 
-![](planning/planning_main/images/planning_obsdian.assets/20250715.png)
+![](../../images/assets/planning_obsdian.assets/20250715.png)
 
 #### ExpandCloseHullObstacleVerticesUsingAdaptingHybridSafeDis
 
@@ -413,8 +413,8 @@ Path : `src/tasks/open_space_trajectory_generation/open_space_trajectory_provide
 2. 获取规划相关数据
  `frame_->planning_start_point_`
     初始值为世界坐标系下的车辆起始位置
-    ![](planning/planning_main/images/planning_obsdian.assets/20250529-1.png)
-    ![](planning/planning_main/images/planning_obsdian.assets/20250529-2.png)
+    ![](../../images/assets/planning_obsdian.assets/20250529-1.png)
+    ![](../../images/assets/planning_obsdian.assets/20250529-2.png)
 
 3. 通过比较车辆与终点的角度与距离以及车速来判断车辆是否到达终点。
  `IsVehicleNearDestination`
@@ -457,7 +457,7 @@ Path : `src/tasks/open_space_trajectory_generation/open_space_trajectory_provide
 5. `DesignSensitiveAreas()`
  敏感区域设定：
     垂直车尾入库 敏感区域如下 （area 2 、3 需要进行障碍物检查）
-    ![](planning/planning_main/images/planning_obsdian.assets/20250530.png)
+    ![](../../images/assets/planning_obsdian.assets/20250530.png)
 6. [[#GenerateDpMap() |GenerateDpMap()]]
  生成 AStar 搜索的 DP 表
 
@@ -468,7 +468,7 @@ Path : `src/tasks/open_space_trajectory_generation/open_space_trajectory_provide
 #### HybridAStar:: ValidityCheck
 
 `vehicle_box` 是 EndPos 的车位姿 box，判断车身位姿是否超出 ROI 区域
-![](planning/planning_main/images/planning_obsdian.assets/20250603.png)
+![](../../images/assets/planning_obsdian.assets/20250603.png)
 
 
 
@@ -511,8 +511,8 @@ Path : `src/tasks/open_space_trajectory_generation/open_space_trajectory_provide
 
 ## ComputeStitchingTrajectory
 
-![](planning/planning_main/images/planning_obsdian.assets/20250715-3.png)
-![](planning/planning_main/images/planning_obsdian.assets/20250715-2.png)
+![](../../images/assets/planning_obsdian.assets/20250715-3.png)
+![](../../images/assets/planning_obsdian.assets/20250715-2.png)
 
 ```
 if (是停车场景): 
@@ -589,5 +589,5 @@ tracking_angle = tracking_vector.Angle();
 ### data_preprocess.cpp
 
  回注数据时的 相关数据转换入口：`ReverseSimulateDataTransferForReinject`
-![](planning/planning_main/images/planning_obsdian.assets/20250616.png)
+![](../../images/assets/planning_obsdian.assets/20250616.png)
 

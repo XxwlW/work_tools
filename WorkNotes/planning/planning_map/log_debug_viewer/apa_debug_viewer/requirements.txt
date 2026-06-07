@@ -1,0 +1,3 @@
+# APA Debug Viewer 依赖
+matplotlib>=3.5.0
+pyyaml>=6.0

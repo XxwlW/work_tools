@@ -24,7 +24,7 @@ Planning BackPlay时要注意车型，车型与Log不同时要修改配置文件
 最后一步轨迹会与更新后的环境发生碰撞
 
 如果规划时边界发生改变，规划的第一步轨迹与碰撞安全距离后的边界发生碰撞时认为ok，后续其他节点按照新边界避免碰撞
-![](planning/planning_main/images/planning_obsdian.assets/20250604.png)
+![](../../images/assets/planning_obsdian.assets/20250604.png)
 
 ## 车型
 <mark style="background: #FF5582A6;">!!! 看数据时要 注意车型切换</mark>
@@ -57,7 +57,7 @@ x: 1： 半断头路
 
 B06 WI-849
 
-![](planning/planning_main/images/planning_obsdian.assets/20250814.png)
+![](../../images/assets/planning_obsdian.assets/20250814.png)
 
 ## 松弛endpos搜索
 
