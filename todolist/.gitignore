@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Local DB
+*.db
+*.db-journal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Test
+.pytest_cache/
+htmlcov/
+.coverage

@@ -1,3 +1,15 @@
+---
+node_type: note
+tags: [笔记, 教程, Harness, day10]
+aliases: [day10, 第10期, Vol.10]
+related:
+  - "[[Vol.08]]"
+  - "[[Vol.09]]"
+  - "[[Vol.11]]"
+title: "08-Harness续篇-精华版"
+created: 2026-06-09
+---
+
 # 笔记 08 精华版：5 大核心组件，Harness 的"马具"长啥样
 
 > 借爆款公式重写：野马比喻 + 五大组件信息图 + 控制论升华

@@ -1,3 +1,13 @@
+---
+node_type: note
+tags: [笔记, 教程, Harness, day10]
+aliases: [day10, 第10期, Vol.10]
+related:
+  - "[[day8]]"
+title: "08-Harness续篇-旧版"
+created: 2026-06-09
+---
+
 # 笔记 08：Harness 后续篇——3 步让 AI 24 小时替你打工
 
 > 选题接 6/2 那篇《写好 Prompt 不算懂 AI》，目标：用续作接住 6/2 已有的 373 曝光 + 10.3% 高点击率流量。

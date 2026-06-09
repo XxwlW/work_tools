@@ -1,0 +1,79 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "node_type:report",
+      "color": {
+        "a": 1,
+        "rgb": 5238255
+      }
+    },
+    {
+      "query": "node_type:pool",
+      "color": {
+        "a": 1,
+        "rgb": 16541471
+      }
+    },
+    {
+      "query": "node_type:note",
+      "color": {
+        "a": 1,
+        "rgb": 4981006
+      }
+    },
+    {
+      "query": "node_type:series",
+      "color": {
+        "a": 1,
+        "rgb": 7068055
+      }
+    },
+    {
+      "query": "node_type:system",
+      "color": {
+        "a": 1,
+        "rgb": 4803007
+      }
+    },
+    {
+      "query": "node_type:index",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "tags:政策",
+      "color": {
+        "a": 1,
+        "rgb": 14830000
+      }
+    },
+    {
+      "query": "tags:打工人",
+      "color": {
+        "a": 1,
+        "rgb": 16401753
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.2,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.36288736930121124,
+  "close": false
+}

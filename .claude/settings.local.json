@@ -10,7 +10,11 @@
       "Bash(python3 -c \"import akshare as ak; df = ak.spot_golden_benchmark_sge\\(\\); print\\(df.columns.tolist\\(\\)\\); print\\(df\\)\")",
       "Bash(robocopy \"C:/Users/Wang/.claude/\" \"D:/ClaudeConfig/\" /MIR /R:2 /W:2 /NFL /NDL /NP)",
       "Bash(echo \"---exit=$?---\")",
-      "Bash(cmd //c \"robocopy \\\\\"C:\\\\\\\\Users\\\\\\\\Wang\\\\\\\\.claude\\\\\\\\\\\\\" \\\\\"D:\\\\\\\\ClaudeConfig\\\\\\\\\\\\\" /MIR /R:2 /W:2 /NFL /NDL /NP\")"
+      "Bash(cmd //c \"robocopy \\\\\"C:\\\\\\\\Users\\\\\\\\Wang\\\\\\\\.claude\\\\\\\\\\\\\" \\\\\"D:\\\\\\\\ClaudeConfig\\\\\\\\\\\\\" /MIR /R:2 /W:2 /NFL /NDL /NP\")",
+      "Bash(.venv/Scripts/python.exe -m pip install --quiet --upgrade pip)",
+      "Bash(.venv/Scripts/python.exe -m pip install --quiet -r requirements.txt)",
+      "Bash(.venv/Scripts/python.exe -m pip install --quiet pytest)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/ -v)"
     ]
   }
 }

@@ -1,3 +1,15 @@
+---
+node_type: note
+tags: [笔记, 政策, 智能经济, day15]
+aliases: [day15, 第15期, Vol.15]
+related:
+  - "[[Vol.16]]"
+  - "[[day11]]"
+  - "[[day16]]"
+title: "README"
+created: 2026-06-09
+---
+
 # day15 prompts 优化说明（纯观点分享版）
 
 > 6 个独立 Prompt 全部采用 day11 验证过的「中文文字 + 英文 Prompt + 平台参数」三段式结构

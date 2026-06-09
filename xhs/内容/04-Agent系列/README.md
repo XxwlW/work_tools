@@ -1,3 +1,15 @@
+---
+node_type: series
+tags: [系列, Agent, 横评]
+aliases: [Agent系列, 系列-Agent系列]
+related:
+  - "[[day10]]"
+  - "[[day11]]"
+  - "[[day12]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 04-Agent系列
 
 **主题**：5 个 AI Agent 工具横评（day11 爆款方向）

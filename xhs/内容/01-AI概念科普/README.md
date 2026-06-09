@@ -1,3 +1,20 @@
+---
+node_type: series
+tags: [系列, AI-概念, 科普]
+aliases: [AI概念科普, 系列-AI概念科普]
+related:
+  - "[[01-AI]]"
+  - "[[day1]]"
+  - "[[day2]]"
+  - "[[day3]]"
+  - "[[day4]]"
+  - "[[day5]]"
+  - "[[day6]]"
+  - "[[day7]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 01-AI概念科普
 
 **主题**：AI 基础知识（怎么说话 / Token / 蒸馒头 / 70 年进化 / Agent 入门 / 2026 三年爆炸）

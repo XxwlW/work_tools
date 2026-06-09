@@ -1,3 +1,13 @@
+---
+node_type: series
+tags: [系列, 工具, 配图]
+aliases: [工具配图库, 系列-工具配图库]
+related:
+  - "[[day9]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 07-工具配图库
 
 **主题**：通用资产（出图指南 / 配图 Prompt / 工具）

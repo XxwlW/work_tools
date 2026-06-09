@@ -1,3 +1,11 @@
+---
+node_type: note
+tags: [笔记, Agent, 横评, day11]
+aliases: [day11, 第11期, Vol.11]
+title: "09-Agent五大天王-精华版"
+created: 2026-06-09
+---
+
 # 笔记 09 精华版：5 个 AI Agent 谁是真王者？（800 字版）
 
 > 800 字精华版，专治"太长不看"的小红书用户

@@ -1,3 +1,11 @@
+---
+node_type: series
+tags: [系列, 打工人, 工具]
+aliases: [打工人急救包, 系列-打工人急救包]
+title: "README"
+created: 2026-06-09
+---
+
 # 05-打工人急救包
 
 **主题**：打工人场景的 AI 提效笔记（周报 / 月报 / 总结 / PPT / Excel 等）

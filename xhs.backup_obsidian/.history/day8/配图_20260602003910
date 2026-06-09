@@ -1,0 +1,19 @@
+按照上述模板修改下述prompt内容，用手账风格，在需要填入内容的位置用中文；
+字体选择：在生成的空白占位符（便利贴、气泡框）中填字时，请务必使用字重较粗的可爱手写体（如：汉仪小麦体、方正字迹等），保持手账的灵魂。
+重点高亮：使用类似“马克笔”的笔刷，在“100万行代码”、“上下文焦虑症”、“小杯逆袭”等词汇下方画上波浪线或黄色高亮背景，引导读者的视觉焦点。
+字号对比：图0封面的主标题一定要大且醒目，直接占据画面最核心的位置。图1-4的内页则用小字密铺，给用户一种“干货多到溢出来，必须先收藏”的心理暗示。
+
+封面：
+A minimalist Xiaohongshu vertical cover design, cute hand-drawn bullet journal style, vintage beige paper background. Top left corner has a cute watermark text "Neural | 奇点". Center visual: A humorous contrast. On the left, a flimsy string trying to pull a giant glowing AI brain. On the right, the same AI brain fitted with a high-tech, cute saddle and reins (representing Harness). Very clean, highly minimalist, lots of negative space for text, simple hand-drawn arrows. Pastel watercolor and marker style, --ar 3:4 --niji 6 --stylize 150
+
+图1：Harness到底是个啥？
+A highly detailed infographic in cute hand-drawn bullet journal style, vintage beige paper background. Top left corner has a cute watermark text "Neural | 奇点". Visuals: A wild horse (AI Model) being fitted with a cute saddle and reins (Harness) to become a smart horse carriage (Agent). Below, a cute coffee shop cup diagram showing components of an order. A formula block: Harness = Agent - Model. 75% of the image is filled with dense blank text placeholders, sticky notes, and text blocks to represent high information density. Pastel colors, marker outlines, --ar 3:4 --niji 6
+
+图2：为什么光会“提要求”不行了？（高密度手账）
+A highly detailed infographic in cute hand-drawn bullet journal style, vintage beige paper background. Top left corner has a cute watermark text "Neural | 奇点". Visuals: A humorous "car rollover" scene with a cute robot looking exhausted and throwing papers (representing context anxiety). A magnifying glass showing a robot giving itself a "100" score while wearing a cute beauty filter. 75% of the image is covered in dense blank text boxes, dashed lines, and bullet point placeholders for heavy text. Notebook layout, pastel colors, --ar 3:4 --niji 6
+
+图3：套上Harness有多神？（高密度手账）
+A highly detailed infographic in cute hand-drawn bullet journal style, vintage beige paper background. Top left corner has a cute watermark text "Neural | 奇点". Visuals: A small cute robot wearing a powerful "Harness" mechanical suit, standing victorious over a giant but basic robot. A split section showing a hard-working sweating robot separated by a brick wall from a strict inspector robot holding a red stamp. 75% of the image space is allocated to dense hand-drawn blank text placeholders, charts, and sticky notes. Educational layout, --ar 3:4 --niji 6
+
+图4：它是怎么管AI的？（高密度手账）
+A highly detailed infographic in cute hand-drawn bullet journal style, vintage beige paper background. Top left corner has a cute watermark text "Neural | 奇点". Visuals: A 3-step workflow diagram featuring three cute robots: a Planner with a blueprint, a Generator building blocks, and an Evaluator with a clipboard. Below, a small cute robot sleeping peacefully in a cozy bed with zZZ bubbles (Auto Dream mode). The layout is extremely dense, with 75% of the area filled with empty speech bubbles, sticky notes, and text placeholders. --ar 3:4 --niji 6

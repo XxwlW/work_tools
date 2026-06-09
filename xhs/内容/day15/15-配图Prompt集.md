@@ -1,3 +1,11 @@
+---
+node_type: note
+tags: [笔记, 政策, 智能经济, day15]
+aliases: [day15, 第15期, Vol.15]
+title: "15-配图Prompt集"
+created: 2026-06-09
+---
+
 # day15 配图 Prompt 集（5 张图 · 纯观点分享版 · 即梦/可灵）
 
 > 出图平台：🥇 即梦 / 🥇 可灵（中文错字率 < 5%）

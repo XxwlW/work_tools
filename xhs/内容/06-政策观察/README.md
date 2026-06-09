@@ -1,3 +1,13 @@
+---
+node_type: series
+tags: [系列, 政策, 智能经济]
+aliases: [政策观察, 系列-政策观察]
+related:
+  - "[[day15]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 06-政策观察
 
 **主题**：蹭两会 / 国家政策 / 官方文件的"政策翻译官"系列

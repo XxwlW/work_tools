@@ -1,3 +1,15 @@
+---
+node_type: note
+tags: [笔记, 教程, Harness, day10]
+aliases: [day10, 第10期, Vol.10]
+related:
+  - "[[Vol.08]]"
+  - "[[day12]]"
+  - "[[day13]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 🚀 v2 配图总览（基于爆款公式重写）
 
 > 完整版笔记：[xhs/day10/08-Harness续篇-精华版.md](08-Harness续篇-精华版.md)

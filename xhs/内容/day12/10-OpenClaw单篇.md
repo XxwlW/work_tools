@@ -1,3 +1,19 @@
+---
+node_type: note
+tags: [笔记, Agent, 热点, day12]
+aliases: [day12, 第12期, Vol.12]
+related:
+  - "[[Vol.08]]"
+  - "[[Vol.09]]"
+  - "[[Vol.10]]"
+  - "[[Vol.11]]"
+  - "[[day10]]"
+  - "[[day11]]"
+  - "[[day8]]"
+title: "10-OpenClaw单篇"
+created: 2026-06-09
+---
+
 # 笔记 10：OpenClaw 单篇——🦞 改名 4 次的 GitHub 神话
 
 > 主题：OpenClaw 改名史 + 数据炸裂 + SOUL.md 实操

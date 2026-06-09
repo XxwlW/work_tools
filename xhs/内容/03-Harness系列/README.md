@@ -1,3 +1,14 @@
+---
+node_type: series
+tags: [系列, 教程, Harness]
+aliases: [Harness系列, 系列-Harness系列]
+related:
+  - "[[day10]]"
+  - "[[day13]]"
+title: "README"
+created: 2026-06-09
+---
+
 # 03-Harness系列
 
 **主题**：Harness / Agent 框架 / 工程师视角

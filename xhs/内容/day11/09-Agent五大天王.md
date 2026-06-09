@@ -1,3 +1,15 @@
+---
+node_type: note
+tags: [笔记, Agent, 横评, day11]
+aliases: [day11, 第11期, Vol.11]
+related:
+  - "[[day10]]"
+  - "[[day8]]"
+  - "[[day9]]"
+title: "09-Agent五大天王"
+created: 2026-06-09
+---
+
 # 笔记 09：AI Agent 五大天王横评（OpenClaw / Codex / Claude Code / DeepSeek / Hermes）
 
 > 主题：5 大 AI Agent 工具科普 + 对比

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书爆款生成器 - Red Note Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'xhs-red': '#ff2442',
+                        'xhs-red-light': '#fff1f2',
+                        'xhs-dark': '#333333',
+                        'xhs-grey': '#666666',
+                        'xhs-bg': '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Outfit', '"Noto Sans SC"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f6f6f6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .xhs-content {
+            white-space: pre-wrap;
+            word-break: break-word;
+            line-height: 1.8;
+        }
+        .emoji-large {
+            font-size: 1.25em;
+            vertical-align: middle;
+            margin: 0 2px;
+        }
+        .copy-feedback {
+            animation: fadeInOut 2s ease-in-out forwards;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e5e5e5;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-sans text-xhs-dark">
+
+    <div class="max-w-[600px] mx-auto bg-white min-h-screen shadow-2xl relative overflow-x-hidden">
+        
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md px-6 py-4 flex items-center justify-between border-b border-gray-100">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-xhs-red rounded-lg flex items-center justify-center shadow-lg shadow-xhs-red/20">
+                    <span class="text-white font-bold text-lg">笔记</span>
+                </div>
+                <h1 class="font-display font-extrabold text-xl tracking-tight text-xhs-dark">小红书爆款生成器</h1>
+            </div>
+            <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-xhs-grey" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                </svg>
+            </button>
+        </header>
+
+        <main class="pb-32">
+            <!-- Section 1: Viral Title Library -->
+            <section class="px-6 py-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xs font-black uppercase tracking-widest text-xhs-grey">🔥 爆款标题建议</h2>
+                    <span class="text-[10px] bg-xhs-red-light text-xhs-red px-2 py-1 rounded-full font-bold">TOP PICK</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="group relative bg-xhs-bg rounded-2xl p-4 transition-all hover:scale-[1.02] hover:shadow-premium cursor-pointer border border-transparent hover:border-xhs-red/10" onclick="copyText(this)">
+                        <p class="font-bold text-lg leading-snug">别只知道GPT！这4个AI神物真正颠覆效率</p>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                        </div>
+                    </div>
+                    <div class="group relative bg-xhs-bg rounded-2xl p-4 transition-all hover:scale-[1.02] hover:shadow-premium cursor-pointer border border-transparent hover:border-xhs-red/10" onclick="copyText(this)">
+                        <p class="font-bold text-lg leading-snug">2026必看：这四大AI智能体正在接管你的工作</p>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                        </div>
+                    </div>
+                    <div class="group relative bg-xhs-bg rounded-2xl p-4 transition-all hover:scale-[1.02] hover:shadow-premium cursor-pointer border border-transparent hover:border-xhs-red/10" onclick="copyText(this)">
+                        <p class="font-bold text-lg leading-snug">小白必读！白话科普地表最强的4个AI大拿</p>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                        </div>
+                    </div>
+                    <div class="group relative bg-xhs-bg rounded-2xl p-4 transition-all hover:scale-[1.02] hover:shadow-premium cursor-pointer border border-transparent hover:border-xhs-red/10" onclick="copyText(this)">
+                        <p class="font-bold text-lg leading-snug">震碎三观！原来AI已经能自我进化写代码了</p>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                        </div>
+                    </div>
+                    <div class="group relative bg-xhs-bg rounded-2xl p-4 transition-all hover:scale-[1.02] hover:shadow-premium cursor-pointer border border-transparent hover:border-xhs-red/10" onclick="copyText(this)">
+                        <p class="font-bold text-lg leading-snug">建议收藏：这4个AI数字员工，你选谁？</p>
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Impact Highlights -->
+            <section class="px-6 pb-8">
+                <div class="bg-xhs-red-light rounded-[2rem] p-8 border border-xhs-red/5 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-xhs-red opacity-5 rounded-full"></div>
+                    
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 bg-xhs-red text-white text-[10px] font-black rounded-full mb-4 uppercase tracking-tighter">Cognitive Flip</span>
+                        <h3 class="text-2xl font-black leading-tight text-xhs-dark mb-4">很多人以为AI Agent就是会干活的聊天机器人...</h3>
+                        <p class="text-xhs-grey leading-relaxed text-base italic border-l-4 border-xhs-red pl-4">
+                            但其实它根本不是“聊天工具”，而是拥有不同“工程哲学”的数字生命，是能独立思考、自主进化的数字员工！
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-xhs-red/10">
+                        <span class="text-xs font-bold text-xhs-red/60 uppercase tracking-widest mb-3 block">Simple Analogy • 形象比喻</span>
+                        <div class="space-y-4 text-sm leading-relaxed text-xhs-dark font-medium">
+                            <div class="flex gap-3">
+                                <span class="flex-shrink-0 text-xl">🌐</span>
+                                <p><strong class="text-xhs-red">OpenClaw:</strong> 能接通全网电话的超级总机，啥都能连但有点“费内存”</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="flex-shrink-0 text-xl">🌱</span>
+                                <p><strong class="text-xhs-red">Hermes:</strong> 越带越聪明的实习生，不仅会干活还会给自己写SOP手册</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="flex-shrink-0 text-xl">🚀</span>
+                                <p><strong class="text-xhs-red">Claude Code:</strong> 手速比脑子还快的总工程师，还没点头他代码就写完了</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="flex-shrink-0 text-xl">🛡️</span>
+                                <p><strong class="text-xhs-red">Codex:</strong> 坐在防弹玻璃后面工作的经理，既能搞定浏览器还会做PPT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Main Body Content -->
+            <section class="px-6 py-4">
+                <div class="xhs-content text-lg text-[#222222] leading-[1.8]">
+第一部分：OpenClaw - 连接一切的社交达人 <span class="emoji-large">🌐</span>
+
+宝子们！如果你想要一个能住在WhatsApp、Slack或者Telegram里的AI助理，选OpenClaw准没错！它主打“连接”，就像一个超级中转站，把各种通讯软件和AI模型缝合在一起。
+
+<span class="emoji-large">💡</span>硬核点：它拥有极其庞大的插件市场，甚至能设置“心跳”机制，趁你睡觉时偷偷醒来检查邮件、执行任务！
+
+<span class="emoji-large">⚠️</span>避坑指南：它是个典型的“内存杀手”，服务器内存要是没过16GB可能跑着跑着就直接崩溃。而且它走的是“狂野路线”，默认安全防御比较弱，小白上手一定要注意密钥安全哦！
+
+第二部分：Hermes Agent - 越用越聪明的成长伴侣 <span class="emoji-large">🌱</span>
+
+这是我最喜欢的一个！普通的AI助手每次启动都像得了“失忆症”，但Hermes不一样，它拥有硬核的三层记忆系统，能记住你的长相、偏好和工作轨迹。
+
+<span class="emoji-large">✨</span>王炸功能：它是目前唯一会“自我进化”的AI。当它费劲解决一个复杂Bug后，会自动总结经验并写成代码存进本地。下次再遇到，它直接调取自己的“学习笔记”，甚至还会给自己打补丁！
+
+这种“知识复利”的感觉真的太爽了！你用得越久，它就越像你的灵魂伴侣，简直是处理长期复杂任务的神器！
+
+第三部分：Claude Code - 效率逆天的极客怪兽 <span class="emoji-large">🚀</span>
+
+想要体验地表最快的执行速度？Claude Code简直是效率狂魔！它是专门为大规模工程设计的。
+
+<span class="emoji-large">❄️</span>黑科技：它用到了“投机执行”机制。简单说，你还没按确认键，它已经在后台一个隐形系统里跑完代码了，你一点确认，结果瞬间同步，完全感觉不到延迟！
+
+它还能一键开启“ultrawork”模式，瞬间召唤出成百上千个子AI分身同时并发干活，互相审查。之前有人通过它在11天内重构了数十万行代码，这战斗力简直是科幻片照进现实！
+
+第四部分：Codex - 把猛兽关进笼子的稳健派 <span class="emoji-large">🛡️</span>
+
+来自OpenAI的Codex，它的哲学只有两个字：稳健！跟Claude靠“自觉”不同，Codex信奉物理隔绝。
+
+<span class="emoji-large">🔒</span>内核级沙盒：它把AI关进了一个“防弹玻璃房”。不管AI想跑什么花哨命令，只要触碰了权限红线，底层系统直接物理切断，绝对不会伤害你的电脑。
+
+它不仅会写代码，还能操作网页和全套Office。如果你需要一个既能帮你自动做报表、又能让你放心地交出文件权限的贴心管家，Codex绝对是不二之选。
+
+第五部分：小白到底该选哪一个？ <span class="emoji-large">💡</span>
+
+看了这么多硬核干货，是不是有点纠结？简单总结一下：
+
+如果你想做一个全天候在线、连通各种社交软件的自动化机器人，选OpenClaw；
+如果你想培养一个懂你的工作流、能量化你经验的贴身助理，选Hermes；
+如果你是极致追求速度、要搞定大工程的效率狂人，选Claude Code；
+如果你看重安全感、需要AI帮你处理文档和网页，选Codex。
+
+AI已经不只是对话框了，它们正在变成真正的“数字员工”，属于普通人的提效时代已经降临！
+                </div>
+            </section>
+
+            <!-- Section 4: Interaction Hooks -->
+            <section class="px-6 py-12">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-xhs-bg rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition-transform hover:scale-95 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        <span class="text-xs font-bold">评论区</span>
+                    </div>
+                    <div class="bg-xhs-bg rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition-transform hover:scale-95 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                        </svg>
+                        <span class="text-xs font-bold">加收藏</span>
+                    </div>
+                    <div class="bg-xhs-bg rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition-transform hover:scale-95 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-xhs-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <span class="text-xs font-bold">求关注</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-xhs-dark text-white rounded-2xl p-6 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="text-lg font-bold mb-2">想拥有你的“数字员工”吗？</p>
+                        <p class="text-white/60 text-sm mb-4">评论区留言，点赞过百出小白上手教程！🚀</p>
+                        <button class="w-full bg-xhs-red hover:bg-xhs-red/90 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-xhs-red/20 active:scale-[0.98]">
+                            立即留言互动
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Actions -->
+        <div class="fixed bottom-8 right-8 flex flex-col gap-3 z-[100] md:right-[calc(50%-280px)]">
+            <button onclick="refreshPage()" class="w-14 h-14 bg-white shadow-premium rounded-full flex items-center justify-center text-xhs-grey hover:text-xhs-red transition-all active:scale-90 border border-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+            </button>
+            <button onclick="copyAll()" class="w-14 h-14 bg-xhs-red shadow-lg shadow-xhs-red/40 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 active:scale-90">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="toast-container" class="fixed top-10 left-1/2 -translate-x-1/2 z-[200] pointer-events-none"></div>
+
+    </div>
+
+    <script>
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'copy-feedback bg-xhs-dark text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl flex items-center gap-2 mb-2';
+            toast.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                ${message}
+            `;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 2100);
+        }
+
+        function copyText(element) {
+            const text = element.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('标题已复制到剪贴板');
+            });
+        }
+
+        function copyAll() {
+            const content = document.querySelector('.xhs-content').innerText;
+            navigator.clipboard.writeText(content).then(() => {
+                showToast('全文已成功复制');
+            });
+        }
+
+        function refreshPage() {
+            const btn = event.currentTarget;
+            btn.classList.add('animate-spin');
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
+        }
+    </script>
+</body>
+</html>

@@ -1,3 +1,11 @@
+---
+node_type: note
+tags: [笔记, Agent, 教程, day6]
+aliases: [day6, 第6期, Vol.6]
+title: "deep-research-thinking-20260527-232504"
+created: 2026-06-09
+---
+
 # 大模型蒸馏研究方案 - Google Gemini
 
 **导出时间 / Exported At:** 2026-05-27 23:25:04

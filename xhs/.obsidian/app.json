@@ -1,0 +1,15 @@
+{
+  "alwaysShowRibbon": true,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "showInlineTitle": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "showFrontmatter": true,
+  "attachmentFolderPath": "attachments",
+  "showUnsupportedFiles": true,
+  "showLineNumbersInEditor": true
+}

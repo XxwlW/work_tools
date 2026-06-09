@@ -1,3 +1,11 @@
+---
+node_type: note
+tags: [笔记, 教程, Skills, day8]
+aliases: [day8, 第8期, Vol.8]
+title: "prompt"
+created: 2026-06-09
+---
+
 你是我的小红书发帖助手。请帮我建份「关于harness的小红书科普贴」。
 请按以下结构输出：
 1.我在帮谁：身边的没有接触过ai的同学和朋友，只是了解一点点相关内容。

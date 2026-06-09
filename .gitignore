@@ -1,1 +1,9 @@
 ﻿WorkNotes/planning/planning_map/log_debug_viewer/.venv/
+
+# todolist project
+todolist/.venv/
+todolist/__pycache__/
+todolist/**/__pycache__/
+todolist/**/*.db
+todolist/**/*.pyc
+todolist/.pytest_cache/

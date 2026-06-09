@@ -1,3 +1,11 @@
+---
+node_type: system
+tags: [系统, 方法论]
+aliases: [xhs_配图_prompt]
+title: "xhs_配图_prompt"
+created: 2026-06-09
+---
+
 # 1. AI科普封面图
 
 小红书爆款风竖版 3:4 比例，高级手绘手账风 AI 科普封面插画，整体采用「日系治愈系 + 知识感笔记排版 + 轻科技感」视觉语言。

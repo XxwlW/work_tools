@@ -1,3 +1,17 @@
+---
+node_type: note
+tags: [笔记, 系列-打工人急救包, 打工人急救包]
+aliases: [AI写周报-精华版, 打工人急救包]
+related:
+  - "[[Vol.11]]"
+  - "[[day10]]"
+  - "[[day11]]"
+  - "[[no-tutorial-without-data]]"
+  - "[[only-opinion-sharing]]"
+title: "AI写周报-精华版"
+created: 2026-06-09
+---
+
 # AI 写周报精华版（笔记 11，移自 day11）
 
 > **A 类 #1 选题**：从 day10 工程师视角切到打工人真实场景

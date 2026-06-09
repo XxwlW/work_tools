@@ -1,3 +1,16 @@
+---
+node_type: note
+tags: [笔记, Agent, 热点, day12]
+aliases: [day12, 第12期, Vol.12]
+related:
+  - "[[Vol.08]]"
+  - "[[Vol.09]]"
+  - "[[Vol.10]]"
+  - "[[Vol.11]]"
+title: "10-OpenClaw单篇-精华版"
+created: 2026-06-09
+---
+
 # 笔记 10 精华版：🦞 OpenClaw 改名 4 次，被 OpenAI 收编
 
 > 借爆款公式："野马"比喻 + "控制论"升华
