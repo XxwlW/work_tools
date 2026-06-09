@@ -11,6 +11,7 @@ APA Debug Viewer - 自动泊车日志调试可视化工具
 
 用法:
     python main.py <log_file>
+    python main.py <log_file> --gui
     python main.py <log_file> --interactive
     python main.py <log_file> --output <dir>
 """
@@ -57,6 +58,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="列出所有帧的概要信息",
     )
+    parser.add_argument(
+        "--gui", "-g",
+        action="store_true",
+        help="启动 GUI 交互模式（支持拖动、缩放、方向键导航）",
+    )
     return parser.parse_args()
 
 
@@ -98,7 +104,10 @@ def main():
             print(f"帧 #{target} 不存在")
         return
 
-    if args.interactive:
+    if args.gui:
+        print("\n启动 GUI 模式（拖动/缩放/方向键导航）...")
+        app.run_gui()
+    elif args.interactive:
         print("\n启动交互模式...")
         app.run_interactive()
     else:
