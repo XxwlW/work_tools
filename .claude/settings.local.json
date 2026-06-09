@@ -14,7 +14,16 @@
       "Bash(.venv/Scripts/python.exe -m pip install --quiet --upgrade pip)",
       "Bash(.venv/Scripts/python.exe -m pip install --quiet -r requirements.txt)",
       "Bash(.venv/Scripts/python.exe -m pip install --quiet pytest)",
-      "Bash(.venv/Scripts/python.exe -m pytest tests/ -v)"
+      "Bash(.venv/Scripts/python.exe -m pytest tests/ -v)",
+      "Bash(find ~/.claude -type d -name \"skills\" 2>/dev/null | head -20)",
+      "Read(//d/ClaudeConfig/**)",
+      "Bash(find / -type d -name \"skills\" 2>/dev/null | grep -i claude | head -20)",
+      "Read(//e//**)",
+      "Bash(find \"D:/ClaudeConfig/skills/memory-management\" -maxdepth 2 -type f 2>/dev/null | head -10)",
+      "Read(//c/Users/Wang/.agents/skills/memory-management/**)",
+      "Bash(ls -la \"/c/Users/Wang/.agents/skills/\" 2>&1 | head -20)",
+      "Read(//c/Users/Wang/.agents/skills//**)",
+      "Bash(du -sh \"D:/ClaudeConfig/skills/\"/*)"
     ]
   }
 }
